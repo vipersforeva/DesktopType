@@ -1,30 +1,48 @@
 namespace DesktopType
 {
-    public partial class Form1 : Form
+    public partial class LogMenu : Form
     {
-        public Form1()
+        public LogMenu()
         {
             InitializeComponent();
+            //this.FormBorderStyle = FormBorderStyle.None; // Убирает границы окна
+            //this.WindowState = FormWindowState.Maximized; // Разворачивает окно на весь экран
+            LoginBox.BackColor = ColorTranslator.FromHtml("#312D2D"); // Цвет фона логина
+            LoginBox.ForeColor = ColorTranslator.FromHtml("#808080"); // Цвет шрифта логина
+
+            PasswordBox.BackColor = ColorTranslator.FromHtml("#312D2D"); // Цвет фона пароля
+            PasswordBox.ForeColor = ColorTranslator.FromHtml("#808080"); // Цвет шрифта пароля
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void LoginBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (Char.IsNumber(e.KeyChar) | Char.IsLetter(e.KeyChar) | e.KeyChar == '\b')
+            {
+                return;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void PasswordBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (Char.IsNumber(e.KeyChar) | Char.IsLetter(e.KeyChar) | (Char.IsPunctuation(e.KeyChar) | e.KeyChar == '\b'))
+            {
+                return;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
+            //this.Hide();
+            RegMenu regmenu = new RegMenu();
+            regmenu.Show();
         }
     }
 }

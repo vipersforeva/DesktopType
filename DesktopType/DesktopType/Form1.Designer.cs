@@ -1,6 +1,6 @@
 ﻿namespace DesktopType
 {
-    partial class Form1
+    partial class LogMenu
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,60 +28,70 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pictureBox1 = new PictureBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            LoginBox = new TextBox();
+            PasswordBox = new TextBox();
+            button1 = new Button();
             SuspendLayout();
             // 
-            // pictureBox1
+            // LoginBox
             // 
-            pictureBox1.Image = Properties.Resources.Frame_9__1_;
-            pictureBox1.ImageLocation = "";
-            pictureBox1.Location = new Point(0, -4);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1920, 1080);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
+            LoginBox.AccessibleDescription = "";
+            LoginBox.BackColor = Color.FromArgb(64, 64, 64);
+            LoginBox.BorderStyle = BorderStyle.None;
+            LoginBox.Font = new Font("Source Code Pro", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LoginBox.ForeColor = Color.Silver;
+            LoginBox.Location = new Point(687, 470);
+            LoginBox.MaxLength = 20;
+            LoginBox.Name = "LoginBox";
+            LoginBox.Size = new Size(544, 31);
+            LoginBox.TabIndex = 0;
+            LoginBox.KeyPress += LoginBox_KeyPress;
             // 
-            // textBox1
+            // PasswordBox
             // 
-            textBox1.BackColor = Color.Gray;
-            textBox1.Location = new Point(688, 466);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 1;
-            textBox1.TextChanged += textBox1_TextChanged;
+            PasswordBox.BackColor = Color.FromArgb(64, 64, 64);
+            PasswordBox.BorderStyle = BorderStyle.None;
+            PasswordBox.Font = new Font("Source Code Pro", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PasswordBox.ForeColor = Color.Silver;
+            PasswordBox.Location = new Point(687, 563);
+            PasswordBox.MaxLength = 20;
+            PasswordBox.Name = "PasswordBox";
+            PasswordBox.PasswordChar = '.';
+            PasswordBox.Size = new Size(544, 31);
+            PasswordBox.TabIndex = 1;
+            PasswordBox.KeyPress += PasswordBox_KeyPress;
             // 
-            // textBox2
+            // button1
             // 
-            textBox2.Location = new Point(688, 560);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
-            textBox2.TabIndex = 2;
-            textBox2.TextChanged += textBox2_TextChanged;
+            button1.Location = new Point(1051, 849);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 2;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
-            // Form1
+            // LogMenu
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1902, 1033);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(pictureBox1);
-            Name = "Form1";
-            Text = "Form1";
-            Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            BackgroundImage = Properties.Resources.Frame_9__1_;
+            ClientSize = new Size(1904, 1041);
+            Controls.Add(button1);
+            Controls.Add(PasswordBox);
+            Controls.Add(LoginBox);
+            DoubleBuffered = true;
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "LogMenu";
+            Text = "LogMenu";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private PictureBox pictureBox1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox LoginBox;
+        private TextBox PasswordBox;
+        private Button button1;
     }
 }

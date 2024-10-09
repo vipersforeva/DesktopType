@@ -28,12 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogMenu));
             LoginBox = new TextBox();
             PasswordBox = new TextBox();
             button1 = new Button();
             pictureBox1 = new PictureBox();
             IsExistPass = new Label();
+            CloseEye = new PictureBox();
+            OpenEye = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)CloseEye).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)OpenEye).BeginInit();
             SuspendLayout();
             // 
             // LoginBox
@@ -41,12 +46,12 @@
             LoginBox.AccessibleDescription = "";
             LoginBox.BackColor = Color.FromArgb(64, 64, 64);
             LoginBox.BorderStyle = BorderStyle.None;
-            LoginBox.Font = new Font("Source Code Pro", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LoginBox.Font = new Font("Microsoft Sans Serif", 18F);
             LoginBox.ForeColor = Color.Silver;
             LoginBox.Location = new Point(687, 470);
             LoginBox.MaxLength = 20;
             LoginBox.Name = "LoginBox";
-            LoginBox.Size = new Size(544, 31);
+            LoginBox.Size = new Size(544, 28);
             LoginBox.TabIndex = 0;
             LoginBox.KeyPress += LoginBox_KeyPress;
             // 
@@ -54,13 +59,13 @@
             // 
             PasswordBox.BackColor = Color.FromArgb(64, 64, 64);
             PasswordBox.BorderStyle = BorderStyle.None;
-            PasswordBox.Font = new Font("Source Code Pro", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PasswordBox.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             PasswordBox.ForeColor = Color.Silver;
             PasswordBox.Location = new Point(687, 563);
             PasswordBox.MaxLength = 20;
             PasswordBox.Name = "PasswordBox";
-            PasswordBox.PasswordChar = '.';
-            PasswordBox.Size = new Size(544, 31);
+            PasswordBox.PasswordChar = '●';
+            PasswordBox.Size = new Size(544, 28);
             PasswordBox.TabIndex = 1;
             PasswordBox.KeyPress += PasswordBox_KeyPress;
             // 
@@ -97,12 +102,37 @@
             IsExistPass.Text = "Не все поля заполнены!";
             IsExistPass.Visible = false;
             // 
+            // CloseEye
+            // 
+            CloseEye.Image = (Image)resources.GetObject("CloseEye.Image");
+            CloseEye.Location = new Point(1154, 537);
+            CloseEye.Name = "CloseEye";
+            CloseEye.Size = new Size(88, 80);
+            CloseEye.SizeMode = PictureBoxSizeMode.StretchImage;
+            CloseEye.TabIndex = 6;
+            CloseEye.TabStop = false;
+            CloseEye.Click += PassEye_Click;
+            // 
+            // OpenEye
+            // 
+            OpenEye.Image = Properties.Resources.PassEyeOpen;
+            OpenEye.Location = new Point(1154, 537);
+            OpenEye.Name = "OpenEye";
+            OpenEye.Size = new Size(88, 80);
+            OpenEye.SizeMode = PictureBoxSizeMode.StretchImage;
+            OpenEye.TabIndex = 7;
+            OpenEye.TabStop = false;
+            OpenEye.Visible = false;
+            OpenEye.Click += PassEye_Click;
+            // 
             // LogMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Frame_9__1_;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(OpenEye);
+            Controls.Add(CloseEye);
             Controls.Add(IsExistPass);
             Controls.Add(pictureBox1);
             Controls.Add(button1);
@@ -112,7 +142,10 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "LogMenu";
             Text = "LogMenu";
+            WindowState = FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)CloseEye).EndInit();
+            ((System.ComponentModel.ISupportInitialize)OpenEye).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -124,5 +157,7 @@
         private Button button1;
         private PictureBox pictureBox1;
         private Label IsExistPass;
+        private PictureBox CloseEye;
+        private PictureBox OpenEye;
     }
 }

@@ -40,12 +40,12 @@
             // 
             LoginBox.BackColor = Color.FromArgb(64, 64, 64);
             LoginBox.BorderStyle = BorderStyle.None;
-            LoginBox.Font = new Font("Source Code Pro", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LoginBox.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             LoginBox.ForeColor = Color.Silver;
             LoginBox.Location = new Point(687, 471);
             LoginBox.MaxLength = 20;
             LoginBox.Name = "LoginBox";
-            LoginBox.Size = new Size(544, 31);
+            LoginBox.Size = new Size(544, 28);
             LoginBox.TabIndex = 1;
             LoginBox.KeyPress += LoginBox_KeyPress;
             // 
@@ -53,12 +53,12 @@
             // 
             PasswordBox.BackColor = Color.FromArgb(64, 64, 64);
             PasswordBox.BorderStyle = BorderStyle.None;
-            PasswordBox.Font = new Font("Source Code Pro", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            PasswordBox.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             PasswordBox.ForeColor = Color.Silver;
             PasswordBox.Location = new Point(687, 534);
             PasswordBox.MaxLength = 20;
             PasswordBox.Name = "PasswordBox";
-            PasswordBox.Size = new Size(544, 31);
+            PasswordBox.Size = new Size(544, 28);
             PasswordBox.TabIndex = 2;
             PasswordBox.KeyPress += PasswordBox_KeyPress;
             // 
@@ -66,12 +66,12 @@
             // 
             RepeatPasswordBox.BackColor = Color.FromArgb(64, 64, 64);
             RepeatPasswordBox.BorderStyle = BorderStyle.None;
-            RepeatPasswordBox.Font = new Font("Source Code Pro", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            RepeatPasswordBox.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             RepeatPasswordBox.ForeColor = Color.Silver;
             RepeatPasswordBox.Location = new Point(687, 596);
             RepeatPasswordBox.MaxLength = 20;
             RepeatPasswordBox.Name = "RepeatPasswordBox";
-            RepeatPasswordBox.Size = new Size(544, 31);
+            RepeatPasswordBox.Size = new Size(544, 28);
             RepeatPasswordBox.TabIndex = 3;
             RepeatPasswordBox.KeyPress += RepeatPasswordBox_KeyPress;
             // 
@@ -112,6 +112,7 @@
             DoubleBuffered = true;
             Name = "RegMenu";
             Text = "RegMenu";
+            WindowState = FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

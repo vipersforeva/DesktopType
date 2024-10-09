@@ -1,17 +1,17 @@
-namespace DesktopType
+п»їnamespace DesktopType
 {
     public partial class LogMenu : Form
     {
         public LogMenu()
         {
             InitializeComponent();
-            //this.FormBorderStyle = FormBorderStyle.None; // Убирает границы окна
-            //this.WindowState = FormWindowState.Maximized; // Разворачивает окно на весь экран
-            LoginBox.BackColor = ColorTranslator.FromHtml("#312D2D"); // Цвет фона логина
-            LoginBox.ForeColor = ColorTranslator.FromHtml("#808080"); // Цвет шрифта логина
+            //this.FormBorderStyle = FormBorderStyle.None; // РЈР±РёСЂР°РµС‚ РіСЂР°РЅРёС†С‹ РѕРєРЅР°
+            this.WindowState = FormWindowState.Maximized; // Р Р°Р·РІРѕСЂР°С‡РёРІР°РµС‚ РѕРєРЅРѕ РЅР° РІРµСЃСЊ СЌРєСЂР°РЅ
+            LoginBox.BackColor = ColorTranslator.FromHtml("#312D2D"); // Р¦РІРµС‚ С„РѕРЅР° Р»РѕРіРёРЅР°
+            LoginBox.ForeColor = ColorTranslator.FromHtml("#808080"); // Р¦РІРµС‚ С€СЂРёС„С‚Р° Р»РѕРіРёРЅР°
 
-            PasswordBox.BackColor = ColorTranslator.FromHtml("#312D2D"); // Цвет фона пароля
-            PasswordBox.ForeColor = ColorTranslator.FromHtml("#808080"); // Цвет шрифта пароля
+            PasswordBox.BackColor = ColorTranslator.FromHtml("#312D2D"); // Р¦РІРµС‚ С„РѕРЅР° РїР°СЂРѕР»СЏ
+            PasswordBox.ForeColor = ColorTranslator.FromHtml("#808080"); // Р¦РІРµС‚ С€СЂРёС„С‚Р° РїР°СЂРѕР»СЏ
         }
 
         private void LoginBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -54,6 +54,27 @@ namespace DesktopType
             else
             {
             }
+        }
+
+        private void PassEye_Click(object sender, EventArgs e)
+        {
+            if (PasswordBox.PasswordChar == 'в—Џ')
+            {
+                PasswordBox.PasswordChar = '\0';
+                CloseEye.Visible = false;
+                OpenEye.Visible = true;
+            }
+            else
+            {
+                PasswordBox.PasswordChar = 'в—Џ';
+                CloseEye.Visible = true;
+                OpenEye.Visible = false;
+            }
+        }
+
+        private void OpenEye_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

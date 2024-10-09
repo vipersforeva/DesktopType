@@ -103,6 +103,16 @@ namespace DesktopType.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PassEyeOpen {
+            get {
+                object obj = ResourceManager.GetObject("PassEyeOpen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Reg {
             get {
                 object obj = ResourceManager.GetObject("Reg", resourceCulture);
@@ -116,6 +126,36 @@ namespace DesktopType.Properties {
         internal static System.Drawing.Bitmap Registrarion {
             get {
                 object obj = ResourceManager.GetObject("Registrarion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RegLabel {
+            get {
+                object obj = ResourceManager.GetObject("RegLabel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RegLabelME {
+            get {
+                object obj = ResourceManager.GetObject("RegLabelME", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Снимок_экрана_2024_10_10_015614 {
+            get {
+                object obj = ResourceManager.GetObject("Снимок экрана 2024-10-10 015614", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

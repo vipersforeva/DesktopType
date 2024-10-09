@@ -44,5 +44,16 @@ namespace DesktopType
             RegMenu regmenu = new RegMenu();
             regmenu.Show();
         }
+
+        private void LogMenu_Click(object sender, EventArgs e)
+        {
+            if (LoginBox.Text.Equals("") || PasswordBox.Text.Equals(""))
+            {
+                IsExistPass.Visible = true;
+            }
+            else
+            {
+            }
+        }
     }
 }

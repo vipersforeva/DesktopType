@@ -63,6 +63,26 @@ namespace DesktopType.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap asd {
+            get {
+                object obj = ResourceManager.GetObject("asd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Autorization {
+            get {
+                object obj = ResourceManager.GetObject("Autorization", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Frame_9__1_ {
             get {
                 object obj = ResourceManager.GetObject("Frame 9 (1)", resourceCulture);
@@ -86,6 +106,16 @@ namespace DesktopType.Properties {
         internal static System.Drawing.Bitmap Reg {
             get {
                 object obj = ResourceManager.GetObject("Reg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Registrarion {
+            get {
+                object obj = ResourceManager.GetObject("Registrarion", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

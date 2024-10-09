@@ -31,6 +31,9 @@
             LoginBox = new TextBox();
             PasswordBox = new TextBox();
             button1 = new Button();
+            pictureBox1 = new PictureBox();
+            IsExistPass = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // LoginBox
@@ -71,12 +74,37 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.Autorization;
+            pictureBox1.Location = new Point(755, 688);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(410, 57);
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += LogMenu_Click;
+            // 
+            // IsExistPass
+            // 
+            IsExistPass.AutoSize = true;
+            IsExistPass.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            IsExistPass.ForeColor = Color.IndianRed;
+            IsExistPass.Image = Properties.Resources.Reg;
+            IsExistPass.Location = new Point(687, 610);
+            IsExistPass.Name = "IsExistPass";
+            IsExistPass.Size = new Size(193, 21);
+            IsExistPass.TabIndex = 5;
+            IsExistPass.Text = "Не все поля заполнены!";
+            IsExistPass.Visible = false;
+            // 
             // LogMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Frame_9__1_;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(IsExistPass);
+            Controls.Add(pictureBox1);
             Controls.Add(button1);
             Controls.Add(PasswordBox);
             Controls.Add(LoginBox);
@@ -84,6 +112,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "LogMenu";
             Text = "LogMenu";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -93,5 +122,7 @@
         private TextBox LoginBox;
         private TextBox PasswordBox;
         private Button button1;
+        private PictureBox pictureBox1;
+        private Label IsExistPass;
     }
 }

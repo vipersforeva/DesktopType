@@ -63,7 +63,30 @@ namespace DesktopType
             else
             {
                 e.Handled = true;
-            } 
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (LoginBox.Text.Equals("") || PasswordBox.Text.Equals("") || RepeatPasswordBox.Text.Equals(""))
+            {
+
+            }
+            else if (PasswordBox.Text.Equals(RepeatPasswordBox.Text))
+            {
+                IsEqualPassword.Visible = false;
+
+                string filePath = "Users.txt";
+                string content = LoginBox.Text.ToLower() + "$" + PasswordBox.Text.ToLower() + "$" + 0 + "$" + 0 + "$" + 0;
+
+                // Запись текста в файл
+                File.AppendAllText(filePath, content + Environment.NewLine);
+            }
+            else
+            {
+                IsEqualPassword.Visible = true;
+            }
+
         }
 
         //public bool IsEqual()

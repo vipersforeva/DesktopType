@@ -32,6 +32,8 @@
             PasswordBox = new TextBox();
             RepeatPasswordBox = new TextBox();
             IsEqualPassword = new Label();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // LoginBox
@@ -79,12 +81,22 @@
             IsEqualPassword.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
             IsEqualPassword.ForeColor = Color.IndianRed;
             IsEqualPassword.Image = Properties.Resources.Reg;
-            IsEqualPassword.Location = new Point(687, 641);
+            IsEqualPassword.Location = new Point(687, 643);
             IsEqualPassword.Name = "IsEqualPassword";
             IsEqualPassword.Size = new Size(178, 21);
             IsEqualPassword.TabIndex = 4;
             IsEqualPassword.Text = "Пароли несовпадают!";
             IsEqualPassword.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.Registrarion;
+            pictureBox1.Location = new Point(729, 736);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(455, 57);
+            pictureBox1.TabIndex = 5;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // RegMenu
             // 
@@ -92,6 +104,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Reg;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(pictureBox1);
             Controls.Add(IsEqualPassword);
             Controls.Add(RepeatPasswordBox);
             Controls.Add(PasswordBox);
@@ -99,6 +112,7 @@
             DoubleBuffered = true;
             Name = "RegMenu";
             Text = "RegMenu";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -109,5 +123,6 @@
         private TextBox PasswordBox;
         private TextBox RepeatPasswordBox;
         private Label IsEqualPassword;
+        private PictureBox pictureBox1;
     }
 }

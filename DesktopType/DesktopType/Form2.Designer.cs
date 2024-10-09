@@ -47,6 +47,7 @@
             LoginBox.Name = "LoginBox";
             LoginBox.Size = new Size(544, 28);
             LoginBox.TabIndex = 1;
+            LoginBox.Text = "Логин";
             LoginBox.KeyPress += LoginBox_KeyPress;
             // 
             // PasswordBox
@@ -60,6 +61,7 @@
             PasswordBox.Name = "PasswordBox";
             PasswordBox.Size = new Size(544, 28);
             PasswordBox.TabIndex = 2;
+            PasswordBox.Text = "Пароль";
             PasswordBox.KeyPress += PasswordBox_KeyPress;
             // 
             // RepeatPasswordBox
@@ -73,6 +75,7 @@
             RepeatPasswordBox.Name = "RepeatPasswordBox";
             RepeatPasswordBox.Size = new Size(544, 28);
             RepeatPasswordBox.TabIndex = 3;
+            RepeatPasswordBox.Text = "Подтвердите пароль";
             RepeatPasswordBox.KeyPress += RepeatPasswordBox_KeyPress;
             // 
             // IsEqualPassword
@@ -83,9 +86,9 @@
             IsEqualPassword.Image = Properties.Resources.Reg;
             IsEqualPassword.Location = new Point(687, 643);
             IsEqualPassword.Name = "IsEqualPassword";
-            IsEqualPassword.Size = new Size(178, 21);
+            IsEqualPassword.Size = new Size(182, 21);
             IsEqualPassword.TabIndex = 4;
-            IsEqualPassword.Text = "Пароли несовпадают!";
+            IsEqualPassword.Text = "Пароли не совпадают!";
             IsEqualPassword.Visible = false;
             // 
             // pictureBox1

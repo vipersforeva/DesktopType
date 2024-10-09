@@ -31,14 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogMenu));
             LoginBox = new TextBox();
             PasswordBox = new TextBox();
-            button1 = new Button();
             pictureBox1 = new PictureBox();
             IsExistPass = new Label();
             CloseEye = new PictureBox();
             OpenEye = new PictureBox();
+            RegLabel = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)CloseEye).BeginInit();
             ((System.ComponentModel.ISupportInitialize)OpenEye).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)RegLabel).BeginInit();
             SuspendLayout();
             // 
             // LoginBox
@@ -53,6 +54,7 @@
             LoginBox.Name = "LoginBox";
             LoginBox.Size = new Size(544, 28);
             LoginBox.TabIndex = 0;
+            LoginBox.Text = "Логин";
             LoginBox.KeyPress += LoginBox_KeyPress;
             // 
             // PasswordBox
@@ -67,17 +69,8 @@
             PasswordBox.PasswordChar = '●';
             PasswordBox.Size = new Size(544, 28);
             PasswordBox.TabIndex = 1;
+            PasswordBox.Text = "Пароль";
             PasswordBox.KeyPress += PasswordBox_KeyPress;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(1051, 849);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 2;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // pictureBox1
             // 
@@ -125,17 +118,29 @@
             OpenEye.Visible = false;
             OpenEye.Click += PassEye_Click;
             // 
+            // RegLabel
+            // 
+            RegLabel.Image = Properties.Resources.RegLabel;
+            RegLabel.Location = new Point(996, 897);
+            RegLabel.Name = "RegLabel";
+            RegLabel.Size = new Size(271, 33);
+            RegLabel.TabIndex = 8;
+            RegLabel.TabStop = false;
+            RegLabel.Click += RegLabel_Click;
+            RegLabel.MouseEnter += RegLabel_MouseEnter;
+            RegLabel.MouseLeave += RegLabel_MouseLeave;
+            // 
             // LogMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Frame_9__1_;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(RegLabel);
             Controls.Add(OpenEye);
             Controls.Add(CloseEye);
             Controls.Add(IsExistPass);
             Controls.Add(pictureBox1);
-            Controls.Add(button1);
             Controls.Add(PasswordBox);
             Controls.Add(LoginBox);
             DoubleBuffered = true;
@@ -146,6 +151,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)CloseEye).EndInit();
             ((System.ComponentModel.ISupportInitialize)OpenEye).EndInit();
+            ((System.ComponentModel.ISupportInitialize)RegLabel).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -154,10 +160,10 @@
 
         private TextBox LoginBox;
         private TextBox PasswordBox;
-        private Button button1;
         private PictureBox pictureBox1;
         private Label IsExistPass;
         private PictureBox CloseEye;
         private PictureBox OpenEye;
+        private PictureBox RegLabel;
     }
 }

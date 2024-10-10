@@ -103,6 +103,26 @@ namespace DesktopType.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap LogLabel {
+            get {
+                object obj = ResourceManager.GetObject("LogLabel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LogLabelME {
+            get {
+                object obj = ResourceManager.GetObject("LogLabelME", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PassEyeOpen {
             get {
                 object obj = ResourceManager.GetObject("PassEyeOpen", resourceCulture);

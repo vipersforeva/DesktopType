@@ -31,9 +31,11 @@
             LoginBox = new TextBox();
             PasswordBox = new TextBox();
             RepeatPasswordBox = new TextBox();
-            IsEqualPassword = new Label();
+            Warn = new Label();
             pictureBox1 = new PictureBox();
+            LogLabel = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)LogLabel).BeginInit();
             SuspendLayout();
             // 
             // LoginBox
@@ -78,18 +80,18 @@
             RepeatPasswordBox.Text = "Подтвердите пароль";
             RepeatPasswordBox.KeyPress += RepeatPasswordBox_KeyPress;
             // 
-            // IsEqualPassword
+            // Warn
             // 
-            IsEqualPassword.AutoSize = true;
-            IsEqualPassword.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            IsEqualPassword.ForeColor = Color.IndianRed;
-            IsEqualPassword.Image = Properties.Resources.Reg;
-            IsEqualPassword.Location = new Point(687, 643);
-            IsEqualPassword.Name = "IsEqualPassword";
-            IsEqualPassword.Size = new Size(182, 21);
-            IsEqualPassword.TabIndex = 4;
-            IsEqualPassword.Text = "Пароли не совпадают!";
-            IsEqualPassword.Visible = false;
+            Warn.AutoSize = true;
+            Warn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            Warn.ForeColor = Color.IndianRed;
+            Warn.Image = Properties.Resources.Reg;
+            Warn.Location = new Point(687, 643);
+            Warn.Name = "Warn";
+            Warn.Size = new Size(182, 21);
+            Warn.TabIndex = 4;
+            Warn.Text = "Пароли не совпадают!";
+            Warn.Visible = false;
             // 
             // pictureBox1
             // 
@@ -101,14 +103,27 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
+            // LogLabel
+            // 
+            LogLabel.Image = Properties.Resources.LogLabel;
+            LogLabel.Location = new Point(1053, 902);
+            LogLabel.Name = "LogLabel";
+            LogLabel.Size = new Size(217, 29);
+            LogLabel.TabIndex = 9;
+            LogLabel.TabStop = false;
+            LogLabel.Click += LogLabel_Click;
+            LogLabel.MouseEnter += LogLabel_MouseEnter;
+            LogLabel.MouseLeave += LogLabel_MouseLeave;
+            // 
             // RegMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Reg;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(LogLabel);
             Controls.Add(pictureBox1);
-            Controls.Add(IsEqualPassword);
+            Controls.Add(Warn);
             Controls.Add(RepeatPasswordBox);
             Controls.Add(PasswordBox);
             Controls.Add(LoginBox);
@@ -118,6 +133,7 @@
             WindowState = FormWindowState.Maximized;
             FormClosed += RegMenu_FormClosed;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)LogLabel).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -127,7 +143,8 @@
         private TextBox LoginBox;
         private TextBox PasswordBox;
         private TextBox RepeatPasswordBox;
-        private Label IsEqualPassword;
+        private Label Warn;
         private PictureBox pictureBox1;
+        private PictureBox LogLabel;
     }
 }

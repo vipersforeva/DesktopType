@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -74,28 +75,57 @@ namespace DesktopType
         {
             if (LoginBox.Text.Equals("") || PasswordBox.Text.Equals("") || RepeatPasswordBox.Text.Equals(""))
             {
-
+                Warn.Text = "Не все поля заполнены!";
+                Warn.Visible = true;
             }
             else if (PasswordBox.Text.Equals(RepeatPasswordBox.Text))
             {
-                IsEqualPassword.Visible = false;
+                if (!isExist(LoginBox.Text))
+                {
+                    Warn.Visible = false;
 
-                string filePath = "Users.txt";
-                string content = LoginBox.Text.ToLower() + "$" + PasswordBox.Text.ToLower() + "$" + 0 + "$" + 0 + "$" + 0;
+                    string filePath = "Users.txt";
+                    string content = LoginBox.Text.ToLower() + "$" + PasswordBox.Text.ToLower() + "$" + 0 + "$" + 0 + "$" + 0;
 
-                // Запись текста в файл
-                File.AppendAllText(filePath, content + Environment.NewLine);
+                    // Запись текста в файл
+                    File.AppendAllText(filePath, content + Environment.NewLine);
+                }
+                else
+                {
+                    Warn.Text = "Аккаунт с таким логином уже существует!";
+                    Warn.Visible = true;
+                }
             }
             else
             {
-                IsEqualPassword.Visible = true;
+                Warn.Text = "Пароли не совпадают!";
+                Warn.Visible = true;
             }
 
         }
+        
 
+        //Обработка закрытия формы
         private void RegMenu_FormClosed(object sender, FormClosedEventArgs e)
         {
             logMenu.Close();
+        }
+
+        //Анимация кнопки авторизации
+        private void LogLabel_MouseEnter(object sender, EventArgs e)
+        {
+            LogLabel.Image = Image.FromFile($"C:/Users/user/Desktop/tmp/DesktopType/DesktopType/DesktopType/Resources/LogLabelME.png");
+        }
+
+        private void LogLabel_MouseLeave(object sender, EventArgs e)
+        {
+            LogLabel.Image = Image.FromFile($"C:/Users/user/Desktop/tmp/DesktopType/DesktopType/DesktopType/Resources/LogLabel.png");
+        }
+
+        private void LogLabel_Click(object sender, EventArgs e)
+        {
+            logMenu.Show();
+            this.Hide();
         }
 
         //public bool IsEqual()
@@ -109,5 +139,31 @@ namespace DesktopType
         //        return false;
         //    }
         //}
+
+        public static bool isExist(string userName)
+        {
+            try
+            {
+                using (StreamReader sr = new StreamReader("Users.txt"))
+                {
+                    string line;
+                    string[] grUs;
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        grUs = line.Split('$');
+                        if (userName.Equals(grUs[0]))
+                        {
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return true;
+            }
+        }
     }
 }

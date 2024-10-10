@@ -101,9 +101,17 @@ namespace DesktopType
 
         private void RegLabel_Click(object sender, EventArgs e)
         {
-            RegMenu regmenu = new RegMenu(_instance);
-            regmenu.Show();
-            this.Hide(); 
+            //RegMenu regmenu = new RegMenu(_instance);
+            //regmenu.Show();
+            //this.Hide();
+
+            //Попытка убрать мерцание
+            using (RegMenu regmenu = new RegMenu(_instance))
+            {
+                this.Hide();
+                regmenu.ShowDialog();
+                this.Show();
+            }
         }
     }
 }

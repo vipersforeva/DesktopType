@@ -1,7 +1,11 @@
-﻿namespace DesktopType
+﻿using System.Runtime.CompilerServices;
+
+namespace DesktopType
 {
     public partial class LogMenu : Form
     {
+        public LogMenu _instance;
+
         public LogMenu()
         {
             InitializeComponent();
@@ -12,6 +16,8 @@
 
             PasswordBox.BackColor = ColorTranslator.FromHtml("#312D2D"); // Цвет фона пароля
             PasswordBox.ForeColor = ColorTranslator.FromHtml("#808080"); // Цвет шрифта пароля
+
+            _instance = this;
         }
 
         //Обработка вводных данных в поле логина
@@ -40,13 +46,6 @@
             }
         }
 
-        //tmp в последствии удалить надо
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //this.Hide();
-            RegMenu regmenu = new RegMenu();
-            regmenu.Show();
-        }
 
         //Обработка нажатия на кнопку входа
         private void LogMenu_Click(object sender, EventArgs e)
@@ -102,8 +101,9 @@
 
         private void RegLabel_Click(object sender, EventArgs e)
         {
-            RegMenu regmenu = new RegMenu();
+            RegMenu regmenu = new RegMenu(_instance);
             regmenu.Show();
+            this.Hide(); 
         }
     }
 }

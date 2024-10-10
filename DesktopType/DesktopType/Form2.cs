@@ -12,9 +12,13 @@ namespace DesktopType
 {
     public partial class RegMenu : Form
     {
-        public RegMenu()
+        private LogMenu logMenu;
+
+        public RegMenu(LogMenu logMenu)
         {
             InitializeComponent();
+
+            this.logMenu = logMenu;
 
             LoginBox.BackColor = ColorTranslator.FromHtml("#312D2D"); // Цвет фона логина
             LoginBox.ForeColor = ColorTranslator.FromHtml("#808080"); // Цвет шрифта логина
@@ -87,6 +91,11 @@ namespace DesktopType
                 IsEqualPassword.Visible = true;
             }
 
+        }
+
+        private void RegMenu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            logMenu.Close();
         }
 
         //public bool IsEqual()

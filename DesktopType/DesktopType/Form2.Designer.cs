@@ -116,6 +116,7 @@
             Name = "RegMenu";
             Text = "RegMenu";
             WindowState = FormWindowState.Maximized;
+            FormClosed += RegMenu_FormClosed;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -80,7 +80,7 @@ namespace DesktopType
             }
             else if (PasswordBox.Text.Equals(RepeatPasswordBox.Text))
             {
-                if (!isExist(LoginBox.Text))
+                if (!isExist(LoginBox.Text.ToLower()))
                 {
                     Warn.Visible = false;
 
@@ -147,11 +147,11 @@ namespace DesktopType
                 using (StreamReader sr = new StreamReader("Users.txt"))
                 {
                     string line;
-                    string[] grUs;
+                    string[] groupOfUsers;
                     while ((line = sr.ReadLine()) != null)
                     {
-                        grUs = line.Split('$');
-                        if (userName.Equals(grUs[0]))
+                        groupOfUsers = line.Split('$');
+                        if (userName.Equals(groupOfUsers[0]))
                         {
                             return true;
                         }

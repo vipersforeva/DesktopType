@@ -146,7 +146,7 @@
             DoubleBuffered = true;
             Margin = new Padding(3, 2, 3, 2);
             Name = "LogMenu";
-            Text = "LogMenu";
+            Text = "Desktop Type";
             WindowState = FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)CloseEye).EndInit();

@@ -129,7 +129,7 @@
             Controls.Add(LoginBox);
             DoubleBuffered = true;
             Name = "RegMenu";
-            Text = "RegMenu";
+            Text = "Desktop Type";
             WindowState = FormWindowState.Maximized;
             FormClosed += RegMenu_FormClosed;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

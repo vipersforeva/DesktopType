@@ -57,6 +57,7 @@ namespace DesktopType
             }
             else
             {
+                IsExistPass.Visible = false;
                 //Логика входа в программу
 
             }
@@ -79,12 +80,6 @@ namespace DesktopType
                 OpenEye.Visible = false;
             }
         }
-
-        private void OpenEye_Click(object sender, EventArgs e)
-        {
-            //надо удалить будет как нибдуь желательно да очень ((
-        }
-
 
         //Анимация кнопки зарегистрироваться 
         private void RegLabel_MouseEnter(object sender, EventArgs e)

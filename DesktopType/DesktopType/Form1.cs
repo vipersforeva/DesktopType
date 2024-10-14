@@ -9,8 +9,6 @@ namespace DesktopType
         public LogMenu()
         {
             InitializeComponent();
-            //this.FormBorderStyle = FormBorderStyle.None; // Убирает границы окна
-            this.WindowState = FormWindowState.Maximized; // Разворачивает окно на весь экран
             LoginBox.BackColor = ColorTranslator.FromHtml("#312D2D"); // Цвет фона логина
             LoginBox.ForeColor = ColorTranslator.FromHtml("#808080"); // Цвет шрифта логина
 
@@ -46,7 +44,6 @@ namespace DesktopType
             }
         }
 
-
         //Обработка нажатия на кнопку входа
         private void LogMenu_Click(object sender, EventArgs e)
         {
@@ -59,10 +56,11 @@ namespace DesktopType
             {
                 IsExistPass.Visible = false;
                 //Логика входа в программу
-
+                MainMenu mainMenu = new MainMenu(_instance);
+                mainMenu.Show();
+                this.Hide();
             }
         }
-
 
         //Логика работы глаза пароля
         private void PassEye_Click(object sender, EventArgs e)
@@ -84,29 +82,20 @@ namespace DesktopType
         //Анимация кнопки зарегистрироваться 
         private void RegLabel_MouseEnter(object sender, EventArgs e)
         {
-            RegLabel.Image = Image.FromFile($"C:/Users/user/Desktop/tmp/DesktopType/DesktopType/DesktopType/Resources/RegLabelME.png");
+            RegLabel.Image = Image.FromFile($"Pictures/RegLabelME.png");
         }
 
         private void RegLabel_MouseLeave(object sender, EventArgs e)
         {
-            RegLabel.Image = Image.FromFile($"C:/Users/user/Desktop/tmp/DesktopType/DesktopType/DesktopType/Resources/RegLabel.png");
+            RegLabel.Image = Image.FromFile($"Pictures/RegLabel.png");
         }
 
         //Логика перехода на форму регистрации
-
         private void RegLabel_Click(object sender, EventArgs e)
         {
-            //RegMenu regmenu = new RegMenu(_instance);
-            //regmenu.Show();
-            //this.Hide();
-
-            //Попытка убрать мерцание
-            using (RegMenu regmenu = new RegMenu(_instance))
-            {
-                this.Hide();
-                regmenu.ShowDialog();
-                this.Show();
-            }
+            RegMenu regMenu = new RegMenu(_instance);
+            regMenu.Show();
+            this.Hide();
         }
     }
 }

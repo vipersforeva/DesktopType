@@ -36,3 +36,23 @@ C:\Users\user\Desktop\tmp\DesktopType\DesktopType\DesktopType\obj\Debug\net8.0-w
 C:\Users\user\Desktop\tmp\DesktopType\DesktopType\DesktopType\obj\Debug\net8.0-windows\DesktopType.pdb
 C:\Users\user\Desktop\tmp\DesktopType\DesktopType\DesktopType\obj\Debug\net8.0-windows\DesktopType.genruntimeconfig.cache
 C:\Users\user\Desktop\tmp\DesktopType\DesktopType\DesktopType\obj\Debug\net8.0-windows\ref\DesktopType.dll
+C:\Users\User\OneDrive\Рабочий стол\DesktopType\DesktopType\DesktopType\DesktopType\bin\Debug\net8.0-windows\DesktopType.exe
+C:\Users\User\OneDrive\Рабочий стол\DesktopType\DesktopType\DesktopType\DesktopType\bin\Debug\net8.0-windows\DesktopType.deps.json
+C:\Users\User\OneDrive\Рабочий стол\DesktopType\DesktopType\DesktopType\DesktopType\bin\Debug\net8.0-windows\DesktopType.runtimeconfig.json
+C:\Users\User\OneDrive\Рабочий стол\DesktopType\DesktopType\DesktopType\DesktopType\bin\Debug\net8.0-windows\DesktopType.dll
+C:\Users\User\OneDrive\Рабочий стол\DesktopType\DesktopType\DesktopType\DesktopType\bin\Debug\net8.0-windows\DesktopType.pdb
+C:\Users\User\OneDrive\Рабочий стол\DesktopType\DesktopType\DesktopType\DesktopType\obj\Debug\net8.0-windows\DesktopType.LogMenu.resources
+C:\Users\User\OneDrive\Рабочий стол\DesktopType\DesktopType\DesktopType\DesktopType\obj\Debug\net8.0-windows\DesktopType.RegMenu.resources
+C:\Users\User\OneDrive\Рабочий стол\DesktopType\DesktopType\DesktopType\DesktopType\obj\Debug\net8.0-windows\DesktopType.Properties.Resources.resources
+C:\Users\User\OneDrive\Рабочий стол\DesktopType\DesktopType\DesktopType\DesktopType\obj\Debug\net8.0-windows\DesktopType.csproj.GenerateResource.cache
+C:\Users\User\OneDrive\Рабочий стол\DesktopType\DesktopType\DesktopType\DesktopType\obj\Debug\net8.0-windows\DesktopType.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\OneDrive\Рабочий стол\DesktopType\DesktopType\DesktopType\DesktopType\obj\Debug\net8.0-windows\DesktopType.AssemblyInfoInputs.cache
+C:\Users\User\OneDrive\Рабочий стол\DesktopType\DesktopType\DesktopType\DesktopType\obj\Debug\net8.0-windows\DesktopType.AssemblyInfo.cs
+C:\Users\User\OneDrive\Рабочий стол\DesktopType\DesktopType\DesktopType\DesktopType\obj\Debug\net8.0-windows\DesktopType.csproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive\Рабочий стол\DesktopType\DesktopType\DesktopType\DesktopType\obj\Debug\net8.0-windows\DesktopType.sourcelink.json
+C:\Users\User\OneDrive\Рабочий стол\DesktopType\DesktopType\DesktopType\DesktopType\obj\Debug\net8.0-windows\DesktopType.dll
+C:\Users\User\OneDrive\Рабочий стол\DesktopType\DesktopType\DesktopType\DesktopType\obj\Debug\net8.0-windows\refint\DesktopType.dll
+C:\Users\User\OneDrive\Рабочий стол\DesktopType\DesktopType\DesktopType\DesktopType\obj\Debug\net8.0-windows\DesktopType.pdb
+C:\Users\User\OneDrive\Рабочий стол\DesktopType\DesktopType\DesktopType\DesktopType\obj\Debug\net8.0-windows\DesktopType.genruntimeconfig.cache
+C:\Users\User\OneDrive\Рабочий стол\DesktopType\DesktopType\DesktopType\DesktopType\obj\Debug\net8.0-windows\ref\DesktopType.dll
+C:\Users\User\OneDrive\Рабочий стол\DesktopType\DesktopType\DesktopType\DesktopType\obj\Debug\net8.0-windows\DesktopType.MainMenu.resources

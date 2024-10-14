@@ -47,9 +47,9 @@
             LoginBox.Location = new Point(687, 471);
             LoginBox.MaxLength = 20;
             LoginBox.Name = "LoginBox";
+            LoginBox.PlaceholderText = "Логин";
             LoginBox.Size = new Size(544, 28);
             LoginBox.TabIndex = 1;
-            LoginBox.Text = "Логин";
             LoginBox.KeyPress += LoginBox_KeyPress;
             // 
             // PasswordBox
@@ -61,9 +61,9 @@
             PasswordBox.Location = new Point(687, 534);
             PasswordBox.MaxLength = 20;
             PasswordBox.Name = "PasswordBox";
+            PasswordBox.PlaceholderText = "Пароль";
             PasswordBox.Size = new Size(544, 28);
             PasswordBox.TabIndex = 2;
-            PasswordBox.Text = "Пароль";
             PasswordBox.KeyPress += PasswordBox_KeyPress;
             // 
             // RepeatPasswordBox
@@ -75,9 +75,9 @@
             RepeatPasswordBox.Location = new Point(687, 596);
             RepeatPasswordBox.MaxLength = 20;
             RepeatPasswordBox.Name = "RepeatPasswordBox";
+            RepeatPasswordBox.PlaceholderText = "Подтвердите пароль";
             RepeatPasswordBox.Size = new Size(544, 28);
             RepeatPasswordBox.TabIndex = 3;
-            RepeatPasswordBox.Text = "Подтвердите пароль";
             RepeatPasswordBox.KeyPress += RepeatPasswordBox_KeyPress;
             // 
             // Warn

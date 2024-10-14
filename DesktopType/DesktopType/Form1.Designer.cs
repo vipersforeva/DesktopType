@@ -52,9 +52,9 @@
             LoginBox.Location = new Point(687, 470);
             LoginBox.MaxLength = 20;
             LoginBox.Name = "LoginBox";
+            LoginBox.PlaceholderText = "Логин";
             LoginBox.Size = new Size(544, 28);
             LoginBox.TabIndex = 0;
-            LoginBox.Text = "Логин";
             LoginBox.KeyPress += LoginBox_KeyPress;
             // 
             // PasswordBox
@@ -67,9 +67,9 @@
             PasswordBox.MaxLength = 20;
             PasswordBox.Name = "PasswordBox";
             PasswordBox.PasswordChar = '●';
+            PasswordBox.PlaceholderText = "Пароль";
             PasswordBox.Size = new Size(544, 28);
             PasswordBox.TabIndex = 1;
-            PasswordBox.Text = "Пароль";
             PasswordBox.KeyPress += PasswordBox_KeyPress;
             // 
             // pictureBox1

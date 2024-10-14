@@ -45,7 +45,6 @@ namespace DesktopType
 
         private void PasswordBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //IsEqualPassword.Visible = IsEqual();
 
             if (Char.IsNumber(e.KeyChar) | Char.IsLetter(e.KeyChar) | (Char.IsPunctuation(e.KeyChar) | e.KeyChar == '\b'))
             {
@@ -59,7 +58,6 @@ namespace DesktopType
 
         private void RepeatPasswordBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //IsEqualPassword.Visible = IsEqual();
 
             if (Char.IsNumber(e.KeyChar) | Char.IsLetter(e.KeyChar) | (Char.IsPunctuation(e.KeyChar) | e.KeyChar == '\b'))
             {
@@ -114,12 +112,12 @@ namespace DesktopType
         //Анимация кнопки авторизации
         private void LogLabel_MouseEnter(object sender, EventArgs e)
         {
-            LogLabel.Image = Image.FromFile($"C:/Users/user/Desktop/tmp/DesktopType/DesktopType/DesktopType/Resources/LogLabelME.png");
+            LogLabel.Image = Image.FromFile($"Pictures/LogLabelME.png");
         }
 
         private void LogLabel_MouseLeave(object sender, EventArgs e)
         {
-            LogLabel.Image = Image.FromFile($"C:/Users/user/Desktop/tmp/DesktopType/DesktopType/DesktopType/Resources/LogLabel.png");
+            LogLabel.Image = Image.FromFile($"Pictures/LogLabel.png");
         }
 
         private void LogLabel_Click(object sender, EventArgs e)
@@ -127,18 +125,6 @@ namespace DesktopType
             logMenu.Show();
             this.Hide();
         }
-
-        //public bool IsEqual()
-        //{
-        //    if (PasswordBox.Text.Equals(RepeatPasswordBox.Text))
-        //    {
-        //        return true;
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
-        //}
 
         public static bool isExist(string userName)
         {

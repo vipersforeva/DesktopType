@@ -28,18 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            richTextBox1 = new RichTextBox();
+            MainTextBox = new RichTextBox();
             button1 = new Button();
             SuspendLayout();
             // 
-            // richTextBox1
+            // MainTextBox
             // 
-            richTextBox1.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            richTextBox1.Location = new Point(267, 409);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(1271, 228);
-            richTextBox1.TabIndex = 0;
-            richTextBox1.Text = "";
+            MainTextBox.BackColor = Color.Black;
+            MainTextBox.BorderStyle = BorderStyle.None;
+            MainTextBox.CausesValidation = false;
+            MainTextBox.Font = new Font("Microsoft Sans Serif", 35F);
+            MainTextBox.Location = new Point(82, 274);
+            MainTextBox.Name = "MainTextBox";
+            MainTextBox.ShortcutsEnabled = false;
+            MainTextBox.Size = new Size(1583, 387);
+            MainTextBox.TabIndex = 0;
+            MainTextBox.Text = "";
+            MainTextBox.KeyDown += MainTextBox_KeyDown;
+            MainTextBox.KeyPress += MainTextBox_KeyPress;
             // 
             // button1
             // 
@@ -58,17 +64,20 @@
             BackgroundImage = Properties.Resources.MainMenu;
             ClientSize = new Size(1904, 1041);
             Controls.Add(button1);
-            Controls.Add(richTextBox1);
+            Controls.Add(MainTextBox);
+            DoubleBuffered = true;
             Name = "MainMenu";
-            Text = "Form3";
+            Text = "Desktop Type";
             WindowState = FormWindowState.Maximized;
             FormClosed += MainMenu_FormClosed;
+            KeyDown += MainMenu_KeyDown;
+            KeyPress += MainMenu_KeyPress;
             ResumeLayout(false);
         }
 
         #endregion
 
-        private RichTextBox richTextBox1;
+        private RichTextBox MainTextBox;
         private Button button1;
     }
 }

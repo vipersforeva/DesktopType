@@ -19,13 +19,13 @@ namespace DesktopType
         {
             InitializeComponent();
 
-            MainTextBox.BackColor = ColorTranslator.FromHtml("#131111");
+            RichTextBox1.BackColor = ColorTranslator.FromHtml("#131111");
 
             this.logMenu = logMenu;
 
-            MainTextBox.SelectionStart = 0; // начальная позиция
-            MainTextBox.SelectionLength = MainTextBox.Text.Length; // длина текста
-            MainTextBox.SelectionColor = ColorTranslator.FromHtml("#717171"); // красный цвет
+            RichTextBox1.SelectionStart = 0; // начальная позиция
+            RichTextBox1.SelectionLength = RichTextBox1.Text.Length; // длина текста
+            RichTextBox1.SelectionColor = ColorTranslator.FromHtml("#717171"); // красный цвет
 
             getText();
         }
@@ -40,7 +40,7 @@ namespace DesktopType
                 text = randomText();
             }
 
-            MainTextBox.Text = text;
+            RichTextBox1.Text = text;
         }
 
         //Функция осуществляющая выбор рандомного текста из файла
@@ -68,39 +68,22 @@ namespace DesktopType
             logMenu.Close();
         }
 
-        //Временная кнопка обновления текста
-        private void button1_Click(object sender, EventArgs e)
-        {
-            getText();
-            MainTextBox.SelectionStart = 0; // начальная позиция
-            MainTextBox.SelectionLength = MainTextBox.Text.Length; // длина текста
-            MainTextBox.SelectionColor = ColorTranslator.FromHtml("#717171"); // красный цвет
-        }
-
-        private void MainMenu_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
-        private void MainMenu_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
 
         private void MainTextBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Back)
             {
                 i--;
-                MainTextBox.Select(i, 1);
-                MainTextBox.SelectionColor = ColorTranslator.FromHtml("#717171");
+                RichTextBox1.Select(i, 1);
+                RichTextBox1.SelectionColor = ColorTranslator.FromHtml("#717171");
                 e.Handled = true; // Помечаем событие как обработанное
                 e.SuppressKeyPress = true; //Скажем НЕТ удалению!
-                MainTextBox.DeselectAll();
+                RichTextBox1.DeselectAll();
                 return;
             }
-            else { 
-                return; 
+            else
+            {
+                return;
             }
         }
 
@@ -108,35 +91,55 @@ namespace DesktopType
         {
             try
             {
-                MainTextBox.Select(i, 1);
-                if (e.KeyChar == MainTextBox.Text[i])
+                RichTextBox1.Select(i, 1);
+                if (e.KeyChar == RichTextBox1.Text[i])
                 {
-                    MainTextBox.SelectionColor = Color.Green;
+                    RichTextBox1.SelectionColor = Color.Green;
                     i++;
                     e.Handled = true;
-                    MainTextBox.DeselectAll();
-                    int currentPosition = MainTextBox.SelectionStart;
-                    MainTextBox.Select(currentPosition + 1, 0);
+                    RichTextBox1.DeselectAll();
+                    int currentPosition = RichTextBox1.SelectionStart;
+                    RichTextBox1.Select(currentPosition + 1, 0);
                 }
                 else if (char.IsLetter(e.KeyChar) || e.KeyChar == ' ')
                 {
-                    MainTextBox.SelectionColor = Color.Red;
+                    RichTextBox1.SelectionColor = Color.Red;
                     i++;
                     e.Handled = true;
-                    MainTextBox.DeselectAll();
-                    int currentPosition = MainTextBox.SelectionStart;
-                    MainTextBox.Select(currentPosition + 1, 0);
+                    RichTextBox1.DeselectAll();
+                    int currentPosition = RichTextBox1.SelectionStart;
+                    RichTextBox1.Select(currentPosition + 1, 0);
                 }
                 else
                 {
                     e.Handled = true;
-                    MainTextBox.DeselectAll();
+                    RichTextBox1.DeselectAll();
                 }
             }
             catch
             {
                 MessageBox.Show("Вы все написали!\n");
             }
+        }
+
+        //Анимации кнопки обновления текста
+        private void reloadText_MouseEnter_1(object sender, EventArgs e)
+        {
+            reloadText.Image = Image.FromFile($"Pictures/ReloadText.png");
+        }
+
+        private void reloadText_MouseLeave(object sender, EventArgs e)
+        {
+            reloadText.Image = Image.FromFile($"Pictures/ReloadTextME.png");
+        }
+
+        // Обработка кнопки обновления текста
+        private void reloadText_Click(object sender, EventArgs e)
+        {
+            getText();
+            RichTextBox1.SelectionStart = 0; // начальная позиция
+            RichTextBox1.SelectionLength = RichTextBox1.Text.Length; // длина текста
+            RichTextBox1.SelectionColor = ColorTranslator.FromHtml("#717171"); // красный цвет
         }
     }
 }

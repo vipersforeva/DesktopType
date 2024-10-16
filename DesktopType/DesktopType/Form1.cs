@@ -21,12 +21,14 @@ namespace DesktopType
         //Обработка вводных данных в поле логина
         private void LoginBox_KeyPress(object sender, KeyPressEventArgs e)
         {
+            // Разрешение ввода чисел, букв и символа backspace
             if (Char.IsNumber(e.KeyChar) | Char.IsLetter(e.KeyChar) | e.KeyChar == '\b')
             {
                 return;
             }
             else
             {
+                // Запрет на ввод любых других символов
                 e.Handled = true;
             }
         }
@@ -34,12 +36,14 @@ namespace DesktopType
         //Обработка вводных данных в поле пароля
         private void PasswordBox_KeyPress(object sender, KeyPressEventArgs e)
         {
+            // Разрешение ввода чисел, букв и символа backspace
             if (Char.IsNumber(e.KeyChar) | Char.IsLetter(e.KeyChar) | (Char.IsPunctuation(e.KeyChar) | e.KeyChar == '\b'))
             {
                 return;
             }
             else
             {
+                // Запрет на ввод любых других символов
                 e.Handled = true;
             }
         }
@@ -55,6 +59,7 @@ namespace DesktopType
             else
             {
                 IsExistPass.Visible = false;
+
                 //Логика входа в программу
                 MainMenu mainMenu = new MainMenu(_instance);
                 mainMenu.Show();
@@ -79,7 +84,7 @@ namespace DesktopType
             }
         }
 
-        //Анимация кнопки зарегистрироваться 
+        //Анимации кнопки "Зарегистрироваться"
         private void RegLabel_MouseEnter(object sender, EventArgs e)
         {
             RegLabel.Image = Image.FromFile($"Pictures/RegLabelME.png");

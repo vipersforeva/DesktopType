@@ -31,53 +31,64 @@ namespace DesktopType
             RepeatPasswordBox.ForeColor = ColorTranslator.FromHtml("#808080"); // Цвет шрифта пароля
         }
 
+        // Обработка вводных данных в поле логина
         private void LoginBox_KeyPress(object sender, KeyPressEventArgs e)
         {
+            // Разрешение ввода чисел, букв и символа backspace
             if (Char.IsNumber(e.KeyChar) | Char.IsLetter(e.KeyChar) | e.KeyChar == '\b')
             {
                 return;
             }
             else
             {
+                // Запрет на ввод любых других символов
                 e.Handled = true;
             }
         }
 
+        // Обработка вводных данных в поле пароля
         private void PasswordBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            // Разрешение ввода чисел, букв и символа backspace
             if (Char.IsNumber(e.KeyChar) | Char.IsLetter(e.KeyChar) | (Char.IsPunctuation(e.KeyChar) | e.KeyChar == '\b'))
             {
                 return;
             }
             else
             {
+                // Запрет на ввод любых других символов
                 e.Handled = true;
             }
         }
 
+        // Обработка вводных данных в поле повторение пароля
         private void RepeatPasswordBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            // Разрешение ввода чисел, букв и символа backspace
             if (Char.IsNumber(e.KeyChar) | Char.IsLetter(e.KeyChar) | (Char.IsPunctuation(e.KeyChar) | e.KeyChar == '\b'))
             {
                 return;
             }
             else
             {
+                // Запрет на ввод любых других символов
                 e.Handled = true;
             }
         }
 
+        // Обработка нажатия на кнопку "Зарегистрироваться"
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            // Проверка, что все поля заполнены.
             if (LoginBox.Text.Equals("") || PasswordBox.Text.Equals("") || RepeatPasswordBox.Text.Equals(""))
             {
                 Warn.Text = "Не все поля заполнены!";
                 Warn.Visible = true;
             }
+            // Проверка, что пароли совпадают.
             else if (PasswordBox.Text.Equals(RepeatPasswordBox.Text))
             {
+                // Проверка, существует ли уже аккаунт с таким логином.
                 if (!isExist(LoginBox.Text.ToLower()))
                 {
                     Warn.Visible = false;
@@ -99,17 +110,15 @@ namespace DesktopType
                 Warn.Text = "Пароли не совпадают!";
                 Warn.Visible = true;
             }
-
         }
         
-
-        //Обработка закрытия формы
+        // Обработка закрытия формы
         private void RegMenu_FormClosed(object sender, FormClosedEventArgs e)
         {
             logMenu.Close();
         }
 
-        //Анимация кнопки авторизации
+        // Анимации кнопки "Авторизоваться"
         private void LogLabel_MouseEnter(object sender, EventArgs e)
         {
             LogLabel.Image = Image.FromFile($"Pictures/LogLabelME.png");
@@ -120,12 +129,14 @@ namespace DesktopType
             LogLabel.Image = Image.FromFile($"Pictures/LogLabel.png");
         }
 
+        // Логика перехода на форму авторизации
         private void LogLabel_Click(object sender, EventArgs e)
         {
             logMenu.Show();
             this.Hide();
         }
 
+        // Проверка, существует ли пользователь с заданным userName.
         public static bool isExist(string userName)
         {
             try

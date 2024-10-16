@@ -28,34 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            MainTextBox = new RichTextBox();
-            button1 = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
+            RichTextBox1 = new RichTextBox();
+            reloadText = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)reloadText).BeginInit();
             SuspendLayout();
             // 
-            // MainTextBox
+            // RichTextBox1
             // 
-            MainTextBox.BackColor = Color.Black;
-            MainTextBox.BorderStyle = BorderStyle.None;
-            MainTextBox.CausesValidation = false;
-            MainTextBox.Font = new Font("Microsoft Sans Serif", 35F);
-            MainTextBox.Location = new Point(82, 274);
-            MainTextBox.Name = "MainTextBox";
-            MainTextBox.ShortcutsEnabled = false;
-            MainTextBox.Size = new Size(1583, 387);
-            MainTextBox.TabIndex = 0;
-            MainTextBox.Text = "";
-            MainTextBox.KeyDown += MainTextBox_KeyDown;
-            MainTextBox.KeyPress += MainTextBox_KeyPress;
+            RichTextBox1.BackColor = Color.Black;
+            RichTextBox1.BorderStyle = BorderStyle.None;
+            RichTextBox1.CausesValidation = false;
+            RichTextBox1.Font = new Font("Microsoft Sans Serif", 35F);
+            RichTextBox1.Location = new Point(82, 274);
+            RichTextBox1.Name = "RichTextBox1";
+            RichTextBox1.ShortcutsEnabled = false;
+            RichTextBox1.Size = new Size(1583, 387);
+            RichTextBox1.TabIndex = 0;
+            RichTextBox1.Text = "";
+            RichTextBox1.KeyDown += MainTextBox_KeyDown;
+            RichTextBox1.KeyPress += MainTextBox_KeyPress;
             // 
-            // button1
+            // reloadText
             // 
-            button1.Location = new Point(1341, 680);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            reloadText.Image = (Image)resources.GetObject("reloadText.Image");
+            reloadText.Location = new Point(851, 689);
+            reloadText.Name = "reloadText";
+            reloadText.Size = new Size(75, 77);
+            reloadText.TabIndex = 2;
+            reloadText.TabStop = false;
+            reloadText.Click += reloadText_Click;
+            reloadText.MouseEnter += reloadText_MouseEnter_1;
+            reloadText.MouseLeave += reloadText_MouseLeave;
             // 
             // MainMenu
             // 
@@ -63,21 +67,20 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.MainMenu;
             ClientSize = new Size(1904, 1041);
-            Controls.Add(button1);
-            Controls.Add(MainTextBox);
+            Controls.Add(reloadText);
+            Controls.Add(RichTextBox1);
             DoubleBuffered = true;
             Name = "MainMenu";
             Text = "Desktop Type";
             WindowState = FormWindowState.Maximized;
             FormClosed += MainMenu_FormClosed;
-            KeyDown += MainMenu_KeyDown;
-            KeyPress += MainMenu_KeyPress;
+            ((System.ComponentModel.ISupportInitialize)reloadText).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private RichTextBox MainTextBox;
-        private Button button1;
+        private RichTextBox RichTextBox1;
+        private PictureBox reloadText;
     }
 }

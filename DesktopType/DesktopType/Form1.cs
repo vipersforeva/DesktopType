@@ -1,4 +1,5 @@
 ﻿using System.Runtime.CompilerServices;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace DesktopType
 {
@@ -61,9 +62,16 @@ namespace DesktopType
                 IsExistPass.Visible = false;
 
                 //Логика входа в программу
-                MainMenu mainMenu = new MainMenu(_instance);
-                mainMenu.Show();
-                this.Hide();
+                if (correctData(LoginBox.Text, PasswordBox.Text))
+                {
+                    MainMenu mainMenu = new MainMenu(_instance);
+                    mainMenu.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Проверьте введеные вами данные!");
+                }
             }
         }
 
@@ -101,6 +109,32 @@ namespace DesktopType
             RegMenu regMenu = new RegMenu(_instance);
             regMenu.Show();
             this.Hide();
+        }
+
+        private bool correctData(string login, string password)
+        {
+            try
+            {
+                using (StreamReader sr = new StreamReader("Users.txt"))
+                {
+                    string line;
+                    string[] groupOfUsers;
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        groupOfUsers = line.Split('$');
+                        if (login.Equals(groupOfUsers[0]) && password.Equals(groupOfUsers[1]))
+                        {
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
         }
     }
 }

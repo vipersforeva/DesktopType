@@ -98,6 +98,10 @@ namespace DesktopType
 
                     // Запись текста в файл
                     File.AppendAllText(filePath, content + Environment.NewLine);
+
+                    MessageBox.Show("Вы успешно зарегстрированы!");
+                    logMenu.Show();
+                    this.Hide();
                 }
                 else
                 {

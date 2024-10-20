@@ -12,22 +12,22 @@ namespace DesktopType
 {
     public partial class DescMenu : Form
     {
-        private MainMenu mainMenu;
-        public DescMenu(MainMenu mainMenu)
+        private LogMenu logmenu;
+        public DescMenu(LogMenu mainMenu)
         {
             InitializeComponent();
 
-            this.mainMenu = mainMenu;
+            this.logmenu = mainMenu;
         }
 
         private void DescMenu_FormClosed(object sender, FormClosedEventArgs e)
         {
-            mainMenu.Close();
+            logmenu.Close();
         }
 
         private void returnButton_Click(object sender, EventArgs e)
         {
-            mainMenu.Show();
+            logmenu.Show();
             this.Hide();
         }
     }

@@ -9,6 +9,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace DesktopType
@@ -23,15 +24,18 @@ namespace DesktopType
 
         static int incorrectType = 0;
 
+
+        private string userName = "";
         public MainMenu _instance;
 
-        public MainMenu(LogMenu logMenu)
+        public MainMenu(LogMenu logMenu, string userName)
         {
             InitializeComponent();
 
             RichTextBox1.BackColor = ColorTranslator.FromHtml("#131111");
 
             this.logMenu = logMenu;
+            this.userName = userName;
 
             TimeLabel.BackColor = ColorTranslator.FromHtml("#131111");
             TimeLabel.ForeColor = ColorTranslator.FromHtml("#717171");
@@ -281,9 +285,16 @@ namespace DesktopType
 
                 Timer15.Image = Image.FromFile($"Pictures/15 gray.png");
                 Timer30.Image = Image.FromFile($"Pictures/30 gray.png");
-                Timer30.Image = Image.FromFile($"Pictures/60 gray.png");
+                Timer60.Image = Image.FromFile($"Pictures/60 gray.png");
 
-
+                int record = findRec(clickedTime);
+                    
+                if (record < Math.Round(countSymbInSec(time, i), 2))
+                {
+                    newRec(clickedTime, (int)Math.Round(countSymbInSec(time, i), 2));
+                    MessageBox.Show("КРАСАВА!!!!!!!!\n");
+                }
+                
                 MessageBox.Show("КРАСАВА!!!!!!!!\n" +
                     "Количество ошибок: " + incorrectType.ToString() +
                     "\nСкорость печати: " + Math.Round(countSymbInSec(time, i), 2));
@@ -295,6 +306,74 @@ namespace DesktopType
                 getText();
                 paintText();
             }
+        }
+
+        private int findRec(int clickedTime)
+        {
+            int record = 0;
+            using (StreamReader sr = new StreamReader("Users.txt"))
+            {
+                string line;
+                string[] groupOfUsers;
+
+                while ((line = sr.ReadLine()) != null)
+                {
+                    groupOfUsers = line.Split('$');
+                    if (userName.Equals(groupOfUsers[0]))
+                    {
+                        switch (clickedTime)
+                        {
+                            case 15:
+                                record = int.Parse(groupOfUsers[2]);
+                                break;
+                            case 30:
+                                record = int.Parse(groupOfUsers[3]);
+                                break;
+                            case 60:
+                                record = int.Parse(groupOfUsers[4]);
+                                break;
+                        }
+                    }
+                }
+            }
+            return record;
+        }
+
+        private void newRec(int clickedTime, int record)
+        {
+            var newFile = new List<string>();
+            using (StreamReader sr = new StreamReader("Users.txt"))
+            {
+                string line;
+                string[] groupOfUsers;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    groupOfUsers = line.Split('$');
+                    if (!userName.Equals(groupOfUsers[0]))
+                    {
+                        newFile.Add(line);
+                    }
+                    else
+                    {
+                        switch (clickedTime)
+                        {
+                            case 15:
+                                groupOfUsers[2] = record.ToString();
+                                break;
+
+                            case 30:
+                                groupOfUsers[3] = record.ToString();
+                                break;
+
+                            case 60:
+                                groupOfUsers[4] = record.ToString();
+                                break;
+                        }
+                        newFile.Add(groupOfUsers[0] + "$" + groupOfUsers[1] + "$" + groupOfUsers[2] + "$" + groupOfUsers[3] + "$" + groupOfUsers[4]);
+                    }
+                }
+            }
+            File.WriteAllLines("Users.txt", newFile);
         }
 
         private double countSymbInSec(int time, int countSymbols) //Функция для подсчета символов в секунду
@@ -319,9 +398,10 @@ namespace DesktopType
             RichTextBox1.DeselectAll();
         }
 
+
         private void descriptionButton_Click(object sender, EventArgs e)
         {
-            DescMenu descMenu = new DescMenu(_instance);
+            DescMenu descMenu = new DescMenu(this.logMenu);
             descMenu.Show();
             this.Hide();
         }

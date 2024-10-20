@@ -117,11 +117,11 @@
             // 
             TimeLabel.AutoSize = true;
             TimeLabel.BackColor = SystemColors.Desktop;
-            TimeLabel.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            TimeLabel.Font = new Font("Segoe UI", 30F);
             TimeLabel.ForeColor = SystemColors.ButtonFace;
-            TimeLabel.Location = new Point(82, 293);
+            TimeLabel.Location = new Point(70, 271);
             TimeLabel.Name = "TimeLabel";
-            TimeLabel.Size = new Size(95, 37);
+            TimeLabel.Size = new Size(139, 54);
             TimeLabel.TabIndex = 6;
             TimeLabel.Text = "Время";
             // 

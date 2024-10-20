@@ -50,6 +50,7 @@
             BackgroundImage = Properties.Resources.description;
             ClientSize = new Size(1904, 1041);
             Controls.Add(returnButton);
+            DoubleBuffered = true;
             Name = "DescMenu";
             Text = "Form4";
             WindowState = FormWindowState.Maximized;

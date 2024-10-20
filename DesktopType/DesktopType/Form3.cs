@@ -5,9 +5,11 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace DesktopType
 {
@@ -15,6 +17,13 @@ namespace DesktopType
     {
         private LogMenu logMenu;
         private static int i = 0; //переменная счетчик для закрашивания введеного текста
+
+        //bool isTimer15Clicked = false;
+        //bool isTimer30Clicked = false;
+        //bool isTimer60Clicked = false;
+
+        static int clickedTime = 0;
+        int time = 0;
         public MainMenu(LogMenu logMenu)
         {
             InitializeComponent();
@@ -140,6 +149,115 @@ namespace DesktopType
             RichTextBox1.SelectionStart = 0; // начальная позиция
             RichTextBox1.SelectionLength = RichTextBox1.Text.Length; // длина текста
             RichTextBox1.SelectionColor = ColorTranslator.FromHtml("#717171"); // красный цвет
+        }
+
+        // Анимации кнопок выбора времени
+        private void Timer15_MouseEnter(object sender, EventArgs e)
+        {
+            //if (!isTimer15Clicked)
+            //{
+                Timer15.Image = Image.FromFile($"Pictures/15.png");
+            //}
+        }
+
+        private void Timer15_MouseLeave(object sender, EventArgs e)
+        {
+            //if (!isTimer15Clicked)
+            //{
+                Timer15.Image = Image.FromFile($"Pictures/15 gray.png");
+            //}
+        }
+
+        private void Timer30_MouseEnter(object sender, EventArgs e)
+        {
+            //if (!isTimer30Clicked)
+            //{
+                Timer30.Image = Image.FromFile($"Pictures/30.png");
+            //}
+        }
+
+        private void Timer30_MouseLeave(object sender, EventArgs e)
+        {
+            //if (!isTimer30Clicked)
+            //{
+                Timer30.Image = Image.FromFile($"Pictures/30 gray.png");
+            //}
+        }
+
+        private void Timer60_MouseEnter(object sender, EventArgs e)
+        {
+            //if (!isTimer60Clicked)
+            //{
+                Timer60.Image = Image.FromFile($"Pictures/60.png");
+            //}
+        }
+
+        private void Timer60_MouseLeave(object sender, EventArgs e)
+        {
+            //if (!isTimer60Clicked)
+            //{
+                Timer60.Image = Image.FromFile($"Pictures/60 gray.png");
+            //}
+        }
+
+        // Обработка нажатия на кнопку "15"
+        private void Timer15_Click(object sender, EventArgs e)
+        {
+            //isTimer15Clicked = true;
+            //Timer15.Image = Image.FromFile($"Pictures/15.png");
+
+            time = 0;
+            timer1.Enabled = true;
+            clickedTime = 15;
+
+            //if (isTimer30Clicked || isTimer60Clicked)
+            //{
+            //    Timer30.Image = Image.FromFile($"Pictures/15 gray.png");
+            //}
+        }
+
+        // Обработка нажатия на кнопку "30"
+        private void Timer30_Click(object sender, EventArgs e)
+        {
+            //isTimer30Clicked = true;
+            //Timer30.Image = Image.FromFile($"Pictures/30.png");
+
+            time = 0;
+            timer1.Enabled = true;
+            clickedTime = 30;
+
+            //if (isTimer15Clicked || isTimer60Clicked)
+            //{
+            //    Timer30.Image = Image.FromFile($"Pictures/30 gray.png");
+            //}
+        }
+
+        // Обработка нажатия на кнопку "60"
+        private void Timer60_Click(object sender, EventArgs e)
+        {
+            //isTimer60Clicked = true;
+            //Timer60.Image = Image.FromFile($"Pictures/60.png");
+
+            time = 0;
+            timer1.Enabled = true;
+            clickedTime = 60;
+
+            //if (isTimer15Clicked || isTimer30Clicked)
+            //{
+            //    Timer30.Image = Image.FromFile($"Pictures/60 gray.png");
+            //}
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            time++;
+            label1.Text = time.ToString();
+
+            if (time == clickedTime)
+            {
+                MessageBox.Show("КРАСАВА!!!!!!!!" + "");
+                timer1.Enabled = false;
+            }
         }
     }
 }

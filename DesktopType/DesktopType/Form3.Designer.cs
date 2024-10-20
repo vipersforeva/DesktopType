@@ -36,7 +36,7 @@
             Timer30 = new PictureBox();
             Timer60 = new PictureBox();
             timer1 = new System.Windows.Forms.Timer(components);
-            label1 = new Label();
+            TimeLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)reloadText).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Timer15).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Timer30).BeginInit();
@@ -111,14 +111,17 @@
             timer1.Interval = 1000;
             timer1.Tick += timer1_Tick;
             // 
-            // label1
+            // TimeLabel
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label1.Location = new Point(82, 309);
-            label1.Name = "label1";
-            label1.Size = new Size(0, 37);
-            label1.TabIndex = 6;
+            TimeLabel.AutoSize = true;
+            TimeLabel.BackColor = SystemColors.Desktop;
+            TimeLabel.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            TimeLabel.ForeColor = SystemColors.ButtonFace;
+            TimeLabel.Location = new Point(82, 293);
+            TimeLabel.Name = "TimeLabel";
+            TimeLabel.Size = new Size(95, 37);
+            TimeLabel.TabIndex = 6;
+            TimeLabel.Text = "Время";
             // 
             // MainMenu
             // 
@@ -126,7 +129,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.MainMenu;
             ClientSize = new Size(1904, 1041);
-            Controls.Add(label1);
+            Controls.Add(TimeLabel);
             Controls.Add(Timer60);
             Controls.Add(Timer30);
             Controls.Add(Timer15);
@@ -153,6 +156,6 @@
         private PictureBox Timer30;
         private PictureBox Timer60;
         private System.Windows.Forms.Timer timer1;
-        private Label label1;
+        private Label TimeLabel;
     }
 }

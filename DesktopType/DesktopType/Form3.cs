@@ -23,6 +23,8 @@ namespace DesktopType
 
         static int incorrectType = 0;
 
+        public MainMenu _instance;
+
         public MainMenu(LogMenu logMenu)
         {
             InitializeComponent();
@@ -35,7 +37,9 @@ namespace DesktopType
             TimeLabel.ForeColor = ColorTranslator.FromHtml("#717171");
 
             getText();
-            paintText(); 
+            paintText();
+
+            _instance = this;
         }
 
         //Функция проверяющая на пустой текст и отображения текста в основном меню
@@ -108,7 +112,7 @@ namespace DesktopType
         {
             try
             {
-                if(clickedTime == 0)
+                if (clickedTime == 0)
                 {
                     MessageBox.Show("Сначало выберите время!");
                     e.Handled = true;
@@ -280,8 +284,8 @@ namespace DesktopType
                 Timer30.Image = Image.FromFile($"Pictures/60 gray.png");
 
 
-                MessageBox.Show("КРАСАВА!!!!!!!!\n" + 
-                    "Количество ошибок: " + incorrectType.ToString()+
+                MessageBox.Show("КРАСАВА!!!!!!!!\n" +
+                    "Количество ошибок: " + incorrectType.ToString() +
                     "\nСкорость печати: " + Math.Round(countSymbInSec(time, i), 2));
 
 
@@ -298,10 +302,10 @@ namespace DesktopType
             double result = 0;
             double t = time / 60.0;
 
-            result =  countSymbols / t;
+            result = countSymbols / t;
             return result;
         }
-        
+
         private void resetSettings()
         {
 
@@ -313,6 +317,13 @@ namespace DesktopType
             RichTextBox1.SelectionLength = RichTextBox1.Text.Length; // длина текста
             RichTextBox1.SelectionColor = ColorTranslator.FromHtml("#717171");
             RichTextBox1.DeselectAll();
+        }
+
+        private void descriptionButton_Click(object sender, EventArgs e)
+        {
+            DescMenu descMenu = new DescMenu(_instance);
+            descMenu.Show();
+            this.Hide();
         }
     }
 }

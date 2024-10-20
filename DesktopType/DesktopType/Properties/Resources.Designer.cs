@@ -93,6 +93,16 @@ namespace DesktopType.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _return {
+            get {
+                object obj = ResourceManager.GetObject("return", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap asd {
             get {
                 object obj = ResourceManager.GetObject("asd", resourceCulture);
@@ -106,6 +116,26 @@ namespace DesktopType.Properties {
         internal static System.Drawing.Bitmap Autorization {
             get {
                 object obj = ResourceManager.GetObject("Autorization", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap description {
+            get {
+                object obj = ResourceManager.GetObject("description", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap descriptionButton {
+            get {
+                object obj = ResourceManager.GetObject("descriptionButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

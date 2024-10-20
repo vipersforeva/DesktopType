@@ -37,10 +37,12 @@
             Timer60 = new PictureBox();
             timer1 = new System.Windows.Forms.Timer(components);
             TimeLabel = new Label();
+            descriptionButton = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)reloadText).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Timer15).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Timer30).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Timer60).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)descriptionButton).BeginInit();
             SuspendLayout();
             // 
             // RichTextBox1
@@ -123,12 +125,24 @@
             TimeLabel.TabIndex = 6;
             TimeLabel.Text = "Время";
             // 
+            // descriptionButton
+            // 
+            descriptionButton.Image = Properties.Resources.descriptionButton;
+            descriptionButton.Location = new Point(1814, 321);
+            descriptionButton.Name = "descriptionButton";
+            descriptionButton.Size = new Size(55, 55);
+            descriptionButton.SizeMode = PictureBoxSizeMode.AutoSize;
+            descriptionButton.TabIndex = 7;
+            descriptionButton.TabStop = false;
+            descriptionButton.Click += descriptionButton_Click;
+            // 
             // MainMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.MainMenu;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(descriptionButton);
             Controls.Add(TimeLabel);
             Controls.Add(Timer60);
             Controls.Add(Timer30);
@@ -144,6 +158,7 @@
             ((System.ComponentModel.ISupportInitialize)Timer15).EndInit();
             ((System.ComponentModel.ISupportInitialize)Timer30).EndInit();
             ((System.ComponentModel.ISupportInitialize)Timer60).EndInit();
+            ((System.ComponentModel.ISupportInitialize)descriptionButton).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -157,5 +172,6 @@
         private PictureBox Timer60;
         private System.Windows.Forms.Timer timer1;
         private Label TimeLabel;
+        private PictureBox descriptionButton;
     }
 }

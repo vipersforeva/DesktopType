@@ -89,7 +89,7 @@ namespace DesktopType
         {
             try
             {
-                if (e.KeyCode == Keys.Back)
+                if (e.KeyCode == Keys.Back && i != 0)
                 {
                     i--;
                     RichTextBox1.Select(i, 1);
@@ -287,17 +287,17 @@ namespace DesktopType
                 Timer30.Image = Image.FromFile($"Pictures/30 gray.png");
                 Timer60.Image = Image.FromFile($"Pictures/60 gray.png");
 
-                int record = findRec(clickedTime);
+                int record = findRec(clickedTime);//поиск рекорда пользователя в указанном времени
                     
-                if (record < Math.Round(countSymbInSec(time, i), 2))
+                if (record < countSymbInSec(time, i))//сравениние рекорда пользователя с текущим 
                 {
-                    newRec(clickedTime, (int)Math.Round(countSymbInSec(time, i), 2));
+                    newRec(clickedTime, countSymbInSec(time, i));//запись нового рекорда
                     MessageBox.Show("КРАСАВА!!!!!!!!\n");
                 }
                 
                 MessageBox.Show("КРАСАВА!!!!!!!!\n" +
                     "Количество ошибок: " + incorrectType.ToString() +
-                    "\nСкорость печати: " + Math.Round(countSymbInSec(time, i), 2));
+                    "\nСкорость печати: " + countSymbInSec(time, i));
 
 
                 TimeLabel.Text = "Время";
@@ -376,13 +376,13 @@ namespace DesktopType
             File.WriteAllLines("Users.txt", newFile);
         }
 
-        private double countSymbInSec(int time, int countSymbols) //Функция для подсчета символов в секунду
+        private int countSymbInSec(int time, int countSymbols) //Функция для подсчета символов в секунду
         {
             double result = 0;
             double t = time / 60.0;
 
             result = countSymbols / t;
-            return result;
+            return (int) Math.Round(result,0);
         }
 
         private void resetSettings()
@@ -390,18 +390,18 @@ namespace DesktopType
 
         }
 
-        private void paintText()
+        private void paintText()// покраска всего текста в серый
         {
             RichTextBox1.SelectionStart = 0; // начальная позиция
             RichTextBox1.SelectionLength = RichTextBox1.Text.Length; // длина текста
-            RichTextBox1.SelectionColor = ColorTranslator.FromHtml("#717171");
+            RichTextBox1.SelectionColor = ColorTranslator.FromHtml("#717171");// серый цвет
             RichTextBox1.DeselectAll();
         }
 
 
         private void descriptionButton_Click(object sender, EventArgs e)
         {
-            DescMenu descMenu = new DescMenu(this.logMenu);
+            DescMenu descMenu = new DescMenu(this.logMenu, this);
             descMenu.Show();
             this.Hide();
         }

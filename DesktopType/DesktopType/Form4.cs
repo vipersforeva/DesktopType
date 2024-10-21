@@ -13,11 +13,13 @@ namespace DesktopType
     public partial class DescMenu : Form
     {
         private LogMenu logmenu;
-        public DescMenu(LogMenu mainMenu)
+        private MainMenu mainmenu;
+        public DescMenu(LogMenu mainMenu, MainMenu mainmenu)
         {
             InitializeComponent();
 
             this.logmenu = mainMenu;
+            this.mainmenu = mainmenu;
         }
 
         private void DescMenu_FormClosed(object sender, FormClosedEventArgs e)
@@ -27,7 +29,7 @@ namespace DesktopType
 
         private void returnButton_Click(object sender, EventArgs e)
         {
-            logmenu.Show();
+            mainmenu.Show();
             this.Hide();
         }
     }

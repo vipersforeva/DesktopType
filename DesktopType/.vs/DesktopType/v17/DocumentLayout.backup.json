@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{426F9599-A473-419D-B28D-5D67EAC7B095}|DesktopType\\DesktopType.csproj|solutionrelative:desktoptype\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{426F9599-A473-419D-B28D-5D67EAC7B095}|DesktopType\\DesktopType.csproj|c:\\users\\user\\desktop\\tmp\\desktoptype\\desktoptype\\desktoptype\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{426F9599-A473-419D-B28D-5D67EAC7B095}|DesktopType\\DesktopType.csproj|solutionrelative:desktoptype\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{426F9599-A473-419D-B28D-5D67EAC7B095}|DesktopType\\DesktopType.csproj|C:\\Users\\user\\Desktop\\tmp\\DesktopType\\DesktopType\\desktoptype\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{426F9599-A473-419D-B28D-5D67EAC7B095}|DesktopType\\DesktopType.csproj|solutionrelative:desktoptype\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{426F9599-A473-419D-B28D-5D67EAC7B095}|DesktopType\\DesktopType.csproj|c:\\users\\user\\desktop\\tmp\\desktoptype\\desktoptype\\desktoptype\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{426F9599-A473-419D-B28D-5D67EAC7B095}|DesktopType\\DesktopType.csproj|solutionrelative:desktoptype\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,14 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{426F9599-A473-419D-B28D-5D67EAC7B095}|DesktopType\\DesktopType.csproj|C:\\Users\\user\\Desktop\\tmp\\DesktopType\\DesktopType\\desktoptype\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{426F9599-A473-419D-B28D-5D67EAC7B095}|DesktopType\\DesktopType.csproj|solutionrelative:desktoptype\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{426F9599-A473-419D-B28D-5D67EAC7B095}|DesktopType\\DesktopType.csproj|c:\\users\\user\\desktop\\tmp\\desktoptype\\desktoptype\\desktoptype\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{426F9599-A473-419D-B28D-5D67EAC7B095}|DesktopType\\DesktopType.csproj|solutionrelative:desktoptype\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{426F9599-A473-419D-B28D-5D67EAC7B095}|DesktopType\\DesktopType.csproj|c:\\users\\user\\desktop\\tmp\\desktoptype\\desktoptype\\desktoptype\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{426F9599-A473-419D-B28D-5D67EAC7B095}|DesktopType\\DesktopType.csproj|solutionrelative:desktoptype\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{426F9599-A473-419D-B28D-5D67EAC7B095}|DesktopType\\DesktopType.csproj|C:\\Users\\user\\Desktop\\tmp\\DesktopType\\DesktopType\\desktoptype\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -54,12 +54,11 @@
               "RelativeToolTip": "DesktopType\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-03T23:02:19.727Z",
-              "IsPinned": true,
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\tmp\\DesktopType\\DesktopType\\DesktopType\\Form1.cs",
               "RelativeDocumentMoniker": "DesktopType\\Form1.cs",
@@ -68,8 +67,7 @@
               "ViewState": "AgIAAB4AAAAAAAAAAAAowEIAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-05T21:55:36.086Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -86,7 +84,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Form2.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\tmp\\DesktopType\\DesktopType\\DesktopType\\Form2.cs",
               "RelativeDocumentMoniker": "DesktopType\\Form2.cs",
@@ -100,16 +98,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form3.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "DocumentIndex": 5,
+              "Title": "Form3.cs [Design]",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\tmp\\DesktopType\\DesktopType\\DesktopType\\Form3.cs",
               "RelativeDocumentMoniker": "DesktopType\\Form3.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\tmp\\DesktopType\\DesktopType\\DesktopType\\Form3.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
-              "RelativeToolTip": "DesktopType\\Form3.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
+              "ToolTip": "C:\\Users\\user\\Desktop\\tmp\\DesktopType\\DesktopType\\DesktopType\\Form3.cs [Design]",
+              "RelativeToolTip": "DesktopType\\Form3.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-14T07:26:09.447Z",
               "IsPinned": true,
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]"
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -119,7 +117,7 @@
               "RelativeDocumentMoniker": "DesktopType\\Form3.cs",
               "ToolTip": "C:\\Users\\user\\Desktop\\tmp\\DesktopType\\DesktopType\\DesktopType\\Form3.cs",
               "RelativeToolTip": "DesktopType\\Form3.cs",
-              "ViewState": "AgIAAJcBAAAAAAAAAAAAwB8BAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAEgBAAAAAAAAAAAgwJEBAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-14T07:35:16.078Z",
               "IsPinned": true,
@@ -127,7 +125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Form4.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435]",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\tmp\\DesktopType\\DesktopType\\DesktopType\\Form4.cs",
               "RelativeDocumentMoniker": "DesktopType\\Form4.cs",
@@ -139,13 +137,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Form4.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\tmp\\DesktopType\\DesktopType\\DesktopType\\Form4.cs",
               "RelativeDocumentMoniker": "DesktopType\\Form4.cs",
               "ToolTip": "C:\\Users\\user\\Desktop\\tmp\\DesktopType\\DesktopType\\DesktopType\\Form4.cs",
               "RelativeToolTip": "DesktopType\\Form4.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAwBMAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAwB8AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-20T16:10:54.423Z",
               "EditorCaption": ""

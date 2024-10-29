@@ -64,7 +64,7 @@ namespace DesktopType
                 //Логика входа в программу
                 if (correctData(LoginBox.Text, PasswordBox.Text))
                 {
-                    MainMenu mainMenu = new MainMenu(_instance, LoginBox.Text);
+                    MainMenu mainMenu = new MainMenu(_instance, LoginBox.Text.ToLower());
                     mainMenu.Show();
                     this.Hide();
                 }

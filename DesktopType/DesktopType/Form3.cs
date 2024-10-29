@@ -288,13 +288,13 @@ namespace DesktopType
                 Timer60.Image = Image.FromFile($"Pictures/60 gray.png");
 
                 int record = findRec(clickedTime);//поиск рекорда пользователя в указанном времени
-                    
+
                 if (record < countSymbInSec(time, i))//сравениние рекорда пользователя с текущим 
                 {
                     newRec(clickedTime, countSymbInSec(time, i));//запись нового рекорда
                     MessageBox.Show("КРАСАВА!!!!!!!!\n");
                 }
-                
+
                 MessageBox.Show("КРАСАВА!!!!!!!!\n" +
                     "Количество ошибок: " + incorrectType.ToString() +
                     "\nСкорость печати: " + countSymbInSec(time, i));
@@ -382,7 +382,7 @@ namespace DesktopType
             double t = time / 60.0;
 
             result = countSymbols / t;
-            return (int) Math.Round(result,0);
+            return (int)Math.Round(result, 0);
         }
 
         private void resetSettings()
@@ -403,6 +403,13 @@ namespace DesktopType
         {
             DescMenu descMenu = new DescMenu(this.logMenu, this);
             descMenu.Show();
+            this.Hide();
+        }
+
+        private void accountButton_Click(object sender, EventArgs e)
+        {
+            AccountMenu accMenu = new AccountMenu(this.logMenu, this, userName);
+            accMenu.Show();
             this.Hide();
         }
     }

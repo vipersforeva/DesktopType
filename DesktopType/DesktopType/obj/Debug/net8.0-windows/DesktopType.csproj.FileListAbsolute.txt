@@ -59,3 +59,4 @@ C:\Users\User\OneDrive\Рабочий стол\DesktopType\DesktopType\DesktopTy
 C:\Users\user\Desktop\tmp\DesktopType\DesktopType\DesktopType\obj\Debug\net8.0-windows\DesktopType.MainMenu.resources
 C:\Users\User\OneDrive\Рабочий стол\DesktopType\DesktopType\DesktopType\DesktopType\obj\Debug\net8.0-windows\DesktopType.DescMenu.resources
 C:\Users\user\Desktop\tmp\DesktopType\DesktopType\DesktopType\obj\Debug\net8.0-windows\DesktopType.DescMenu.resources
+C:\Users\user\Desktop\tmp\DesktopType\DesktopType\DesktopType\obj\Debug\net8.0-windows\DesktopType.AccountMenu.resources

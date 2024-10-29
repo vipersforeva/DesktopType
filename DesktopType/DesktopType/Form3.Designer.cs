@@ -38,11 +38,13 @@
             timer1 = new System.Windows.Forms.Timer(components);
             TimeLabel = new Label();
             descriptionButton = new PictureBox();
+            accountButton = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)reloadText).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Timer15).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Timer30).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Timer60).BeginInit();
             ((System.ComponentModel.ISupportInitialize)descriptionButton).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)accountButton).BeginInit();
             SuspendLayout();
             // 
             // RichTextBox1
@@ -136,12 +138,23 @@
             descriptionButton.TabStop = false;
             descriptionButton.Click += descriptionButton_Click;
             // 
+            // accountButton
+            // 
+            accountButton.Image = Properties.Resources.Group_24;
+            accountButton.Location = new Point(1802, 59);
+            accountButton.Name = "accountButton";
+            accountButton.Size = new Size(78, 72);
+            accountButton.TabIndex = 8;
+            accountButton.TabStop = false;
+            accountButton.Click += accountButton_Click;
+            // 
             // MainMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.MainMenu;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(accountButton);
             Controls.Add(descriptionButton);
             Controls.Add(TimeLabel);
             Controls.Add(Timer60);
@@ -159,6 +172,7 @@
             ((System.ComponentModel.ISupportInitialize)Timer30).EndInit();
             ((System.ComponentModel.ISupportInitialize)Timer60).EndInit();
             ((System.ComponentModel.ISupportInitialize)descriptionButton).EndInit();
+            ((System.ComponentModel.ISupportInitialize)accountButton).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -173,5 +187,6 @@
         private System.Windows.Forms.Timer timer1;
         private Label TimeLabel;
         private PictureBox descriptionButton;
+        private PictureBox accountButton;
     }
 }

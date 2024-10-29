@@ -289,22 +289,27 @@ namespace DesktopType
 
                 int record = findRec(clickedTime);//поиск рекорда пользователя в указанном времени
 
-                if (record < countSymbInSec(time, i))//сравениние рекорда пользователя с текущим 
+                if (record < countSymbInSec(time, i))//сравнение рекорда пользователя с текущим 
                 {
                     newRec(clickedTime, countSymbInSec(time, i));//запись нового рекорда
-                    MessageBox.Show("КРАСАВА!!!!!!!!\n");
+                    //MessageBox.Show("КРАСАВА!!!!!!!!\n");
                 }
 
-                MessageBox.Show("КРАСАВА!!!!!!!!\n" +
-                    "Количество ошибок: " + incorrectType.ToString() +
-                    "\nСкорость печати: " + countSymbInSec(time, i));
+                //MessageBox.Show("КРАСАВА!!!!!!!!\n" +
+                //    "Количество ошибок: " + incorrectType.ToString() +
+                //    "\nСкорость печати: " + countSymbInSec(time, i));
 
+                
 
                 TimeLabel.Text = "Время";
                 i = 0;
                 clickedTime = 0;
                 getText();
                 paintText();
+
+                resultMenu resMenu = new resultMenu(logMenu, this, countSymbInSec(time, i), (int)(100 - (incorrectType * 100 / RichTextBox1.Text.Length)), clickedTime);
+                resMenu.Show();
+                this.Hide();
             }
         }
 

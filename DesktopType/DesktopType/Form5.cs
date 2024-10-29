@@ -81,7 +81,7 @@ namespace DesktopType
                             rec3Ar[1]++;
                     }
                 }
-                
+
                 top1.Text = (rec1Ar[1] + 1).ToString() + " место";
                 top2.Text = (rec2Ar[1] + 1).ToString() + " место";
                 top3.Text = (rec3Ar[1] + 1).ToString() + " место";
@@ -97,6 +97,12 @@ namespace DesktopType
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void returnButton_Click(object sender, EventArgs e)
+        {
+            mainmenu.Show();
+            this.Hide();
         }
     }
 }

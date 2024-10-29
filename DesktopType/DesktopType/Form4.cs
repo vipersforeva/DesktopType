@@ -14,11 +14,11 @@ namespace DesktopType
     {
         private LogMenu logmenu;
         private MainMenu mainmenu;
-        public DescMenu(LogMenu mainMenu, MainMenu mainmenu)
+        public DescMenu(LogMenu logmenu, MainMenu mainmenu)
         {
             InitializeComponent();
 
-            this.logmenu = mainMenu;
+            this.logmenu = logmenu;
             this.mainmenu = mainmenu;
         }
 

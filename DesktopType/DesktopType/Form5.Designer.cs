@@ -41,6 +41,8 @@
             top1 = new Label();
             top2 = new Label();
             top3 = new Label();
+            returnButton = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)returnButton).BeginInit();
             SuspendLayout();
             // 
             // helloLabel
@@ -200,12 +202,24 @@
             top3.TabIndex = 12;
             top3.Text = "152 место";
             // 
+            // returnButton
+            // 
+            returnButton.Image = Properties.Resources._return;
+            returnButton.Location = new Point(1766, 42);
+            returnButton.Name = "returnButton";
+            returnButton.Size = new Size(100, 100);
+            returnButton.SizeMode = PictureBoxSizeMode.AutoSize;
+            returnButton.TabIndex = 13;
+            returnButton.TabStop = false;
+            returnButton.Click += returnButton_Click;
+            // 
             // AccountMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Group_23;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(returnButton);
             Controls.Add(top3);
             Controls.Add(top2);
             Controls.Add(top1);
@@ -224,6 +238,7 @@
             Text = "Desktop Type";
             WindowState = FormWindowState.Maximized;
             FormClosed += Form5_FormClosed;
+            ((System.ComponentModel.ISupportInitialize)returnButton).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -243,5 +258,6 @@
         private Label top1;
         private Label top2;
         private Label top3;
+        private PictureBox returnButton;
     }
 }

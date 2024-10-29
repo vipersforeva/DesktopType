@@ -42,14 +42,14 @@ namespace DesktopType
             top3.BackColor = ColorTranslator.FromHtml("#131111");
 
 
+            int[] rec1Ar = new int[2];
+            int[] rec2Ar = new int[2];
+            int[] rec3Ar = new int[2];
+
             using (StreamReader sr = new StreamReader("Users.txt"))
             {
                 string line;
                 string[] groupOfUsers;
-
-                int[] rec1Ar = new int[2];
-                int[] rec2Ar = new int[2];
-                int[] rec3Ar = new int[2];
 
                 while ((line = sr.ReadLine()) != null)
                 {
@@ -66,7 +66,11 @@ namespace DesktopType
                         break;
                     }
                 }
-
+            }
+            using (StreamReader sr = new StreamReader("Users.txt"))
+            {
+                string line;
+                string[] groupOfUsers;
                 while ((line = sr.ReadLine()) != null)
                 {
                     groupOfUsers = line.Split('$');

@@ -62,7 +62,7 @@ namespace DesktopType
                 IsExistPass.Visible = false;
 
                 //Логика входа в программу
-                if (correctData(LoginBox.Text, PasswordBox.Text))
+                if (correctData(LoginBox.Text.ToLower(), PasswordBox.Text))
                 {
                     MainMenu mainMenu = new MainMenu(_instance, LoginBox.Text.ToLower());
                     mainMenu.Show();

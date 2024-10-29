@@ -299,7 +299,7 @@ namespace DesktopType
                 //    "Количество ошибок: " + incorrectType.ToString() +
                 //    "\nСкорость печати: " + countSymbInSec(time, i));
 
-                
+                resultMenu resMenu = new resultMenu(logMenu, this, countSymbInSec(time, i), (int)(100 - (incorrectType * 100 / RichTextBox1.Text.Length)), clickedTime);
 
                 TimeLabel.Text = "Время";
                 i = 0;
@@ -307,7 +307,6 @@ namespace DesktopType
                 getText();
                 paintText();
 
-                resultMenu resMenu = new resultMenu(logMenu, this, countSymbInSec(time, i), (int)(100 - (incorrectType * 100 / RichTextBox1.Text.Length)), clickedTime);
                 resMenu.Show();
                 this.Hide();
             }

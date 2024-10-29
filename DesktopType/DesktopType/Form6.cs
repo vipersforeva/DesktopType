@@ -27,7 +27,7 @@ namespace DesktopType
 
             speed.Text = speedOfType.ToString();
             acc.Text = accuracy.ToString() + "%";
-            times.Text = time.ToString();
+            times.Text = time.ToString() + " сек";
 
             speed.BackColor = ColorTranslator.FromHtml("#892199");
             acc.BackColor = ColorTranslator.FromHtml("#29A9B7");

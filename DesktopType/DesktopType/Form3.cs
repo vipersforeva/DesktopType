@@ -99,6 +99,13 @@ namespace DesktopType
                     RichTextBox1.DeselectAll();
                     return;
                 }
+                else if (e.KeyCode == Keys.Back && i == 0)
+                {
+                    e.Handled = true; // Помечаем событие как обработанное
+                    e.SuppressKeyPress = true; //Скажем НЕТ удалению!
+                    RichTextBox1.DeselectAll();
+                    return;
+                }
                 else
                 {
                     return;
@@ -292,12 +299,7 @@ namespace DesktopType
                 if (record < countSymbInSec(time, i))//сравнение рекорда пользователя с текущим 
                 {
                     newRec(clickedTime, countSymbInSec(time, i));//запись нового рекорда
-                    //MessageBox.Show("КРАСАВА!!!!!!!!\n");
                 }
-
-                //MessageBox.Show("КРАСАВА!!!!!!!!\n" +
-                //    "Количество ошибок: " + incorrectType.ToString() +
-                //    "\nСкорость печати: " + countSymbInSec(time, i));
 
                 resultMenu resMenu = new resultMenu(logMenu, this, countSymbInSec(time, i), (int)(100 - (incorrectType * 100 / RichTextBox1.Text.Length)), clickedTime);
 

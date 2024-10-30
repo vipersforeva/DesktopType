@@ -418,5 +418,25 @@ namespace DesktopType
             accMenu.Show();
             this.Hide();
         }
+
+        private void accountButton_MouseEnter(object sender, EventArgs e)
+        {
+            accountButton.Image = Image.FromFile($"Pictures/profile.png");
+        }
+
+        private void accountButton_MouseLeave(object sender, EventArgs e)
+        {
+            accountButton.Image = Image.FromFile($"Pictures/group 24.png");
+        }
+
+        private void descriptionButton_MouseEnter(object sender, EventArgs e)
+        {
+            descriptionButton.Image = Image.FromFile($"Pictures/description color.png");
+        }
+
+        private void descriptionButton_MouseLeave(object sender, EventArgs e)
+        {
+            descriptionButton.Image = Image.FromFile($"Pictures/descriptionButton.png");
+        }
     }
 }

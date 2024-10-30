@@ -137,6 +137,8 @@
             descriptionButton.TabIndex = 7;
             descriptionButton.TabStop = false;
             descriptionButton.Click += descriptionButton_Click;
+            descriptionButton.MouseEnter += descriptionButton_MouseEnter;
+            descriptionButton.MouseLeave += descriptionButton_MouseLeave;
             // 
             // accountButton
             // 
@@ -147,6 +149,8 @@
             accountButton.TabIndex = 8;
             accountButton.TabStop = false;
             accountButton.Click += accountButton_Click;
+            accountButton.MouseEnter += accountButton_MouseEnter;
+            accountButton.MouseLeave += accountButton_MouseLeave;
             // 
             // MainMenu
             // 

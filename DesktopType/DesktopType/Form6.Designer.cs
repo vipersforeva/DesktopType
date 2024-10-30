@@ -45,6 +45,8 @@
             returnButton.TabIndex = 14;
             returnButton.TabStop = false;
             returnButton.Click += returnButton_Click;
+            returnButton.MouseEnter += returnButton_MouseEnter;
+            returnButton.MouseLeave += returnButton_MouseLeave;
             // 
             // speed
             // 

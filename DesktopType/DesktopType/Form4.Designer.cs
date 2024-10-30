@@ -42,6 +42,8 @@
             returnButton.TabIndex = 0;
             returnButton.TabStop = false;
             returnButton.Click += returnButton_Click;
+            returnButton.MouseEnter += returnButton_MouseEnter;
+            returnButton.MouseLeave += returnButton_MouseLeave;
             // 
             // DescMenu
             // 

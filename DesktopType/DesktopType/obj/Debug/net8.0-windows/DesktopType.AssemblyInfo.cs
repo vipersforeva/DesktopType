@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DesktopType")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+43f6dc7774f7dd7b1065d592f005b637e68cf804")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+54f3a899c6f97e3d905e573415e6223744138745")]
 [assembly: System.Reflection.AssemblyProductAttribute("DesktopType")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DesktopType")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

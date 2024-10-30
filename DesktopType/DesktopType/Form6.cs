@@ -44,5 +44,15 @@ namespace DesktopType
             mainmenu.Show();
             this.Hide();
         }
+
+        private void returnButton_MouseEnter(object sender, EventArgs e)
+        {
+            returnButton.Image = Image.FromFile($"Pictures/return gray.png");
+        }
+
+        private void returnButton_MouseLeave(object sender, EventArgs e)
+        {
+            returnButton.Image = Image.FromFile($"Pictures/return.png");
+        }
     }
 }

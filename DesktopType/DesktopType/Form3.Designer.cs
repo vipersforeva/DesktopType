@@ -39,12 +39,14 @@
             TimeLabel = new Label();
             descriptionButton = new PictureBox();
             accountButton = new PictureBox();
+            changeLanguage = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)reloadText).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Timer15).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Timer30).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Timer60).BeginInit();
             ((System.ComponentModel.ISupportInitialize)descriptionButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)accountButton).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)changeLanguage).BeginInit();
             SuspendLayout();
             // 
             // RichTextBox1
@@ -130,7 +132,7 @@
             // descriptionButton
             // 
             descriptionButton.Image = Properties.Resources.descriptionButton;
-            descriptionButton.Location = new Point(1814, 321);
+            descriptionButton.Location = new Point(1806, 321);
             descriptionButton.Name = "descriptionButton";
             descriptionButton.Size = new Size(55, 55);
             descriptionButton.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -143,7 +145,7 @@
             // accountButton
             // 
             accountButton.Image = Properties.Resources.Group_24;
-            accountButton.Location = new Point(1802, 59);
+            accountButton.Location = new Point(1793, 59);
             accountButton.Name = "accountButton";
             accountButton.Size = new Size(78, 72);
             accountButton.TabIndex = 8;
@@ -152,12 +154,23 @@
             accountButton.MouseEnter += accountButton_MouseEnter;
             accountButton.MouseLeave += accountButton_MouseLeave;
             // 
+            // changeLanguage
+            // 
+            changeLanguage.Image = (Image)resources.GetObject("changeLanguage.Image");
+            changeLanguage.Location = new Point(1763, 935);
+            changeLanguage.Name = "changeLanguage";
+            changeLanguage.Size = new Size(145, 57);
+            changeLanguage.TabIndex = 9;
+            changeLanguage.TabStop = false;
+            changeLanguage.Click += pictureBox1_Click;
+            // 
             // MainMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.MainMenu;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1904, 1041);
+            Controls.Add(changeLanguage);
             Controls.Add(accountButton);
             Controls.Add(descriptionButton);
             Controls.Add(TimeLabel);
@@ -177,6 +190,7 @@
             ((System.ComponentModel.ISupportInitialize)Timer60).EndInit();
             ((System.ComponentModel.ISupportInitialize)descriptionButton).EndInit();
             ((System.ComponentModel.ISupportInitialize)accountButton).EndInit();
+            ((System.ComponentModel.ISupportInitialize)changeLanguage).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -192,5 +206,6 @@
         private Label TimeLabel;
         private PictureBox descriptionButton;
         private PictureBox accountButton;
+        private PictureBox changeLanguage;
     }
 }

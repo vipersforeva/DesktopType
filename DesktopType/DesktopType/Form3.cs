@@ -24,7 +24,7 @@ namespace DesktopType
 
         static int incorrectType = 0;
 
-        private bool isTyping = false;
+        private string currentLanguage = "TextsRu.txt";
 
         private string userName = "";
         public MainMenu _instance;
@@ -54,16 +54,15 @@ namespace DesktopType
 
             while (text.Length < 3)
             {
-                text = randomText();
+                text = randomText(currentLanguage);
             }
 
             RichTextBox1.Text = text;
         }
 
         //Функция осуществляющая выбор рандомного текста из файла
-        private string randomText()
+        private string randomText(string filePath)
         {
-            string filePath = "Texts.txt";
             string text;
 
             if (File.Exists(filePath))
@@ -447,6 +446,33 @@ namespace DesktopType
         private void descriptionButton_MouseLeave(object sender, EventArgs e)
         {
             descriptionButton.Image = Image.FromFile($"Pictures/descriptionButton.png");
+        }
+
+        //смена языка
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if(currentLanguage == "TextsRu.txt")
+            {
+                currentLanguage = "TextsEng.txt";
+                changeLanguage.Image = Image.FromFile($"Pictures/engLanguage.png");
+            }
+            else
+            {
+                currentLanguage = "TextsRu.txt";
+                changeLanguage.Image = Image.FromFile($"Pictures/ruLanguage.png");
+            }
+
+            timer1.Enabled = false;
+
+            Timer15.Image = Image.FromFile($"Pictures/15 gray.png");
+            Timer30.Image = Image.FromFile($"Pictures/30 gray.png");
+            Timer60.Image = Image.FromFile($"Pictures/60 gray.png");
+
+            TimeLabel.Text = "Время";
+            i = 0;
+            clickedTime = 0;
+            getText();
+            paintText();
         }
     }
 }

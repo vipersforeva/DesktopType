@@ -24,6 +24,7 @@ namespace DesktopType
 
         static int incorrectType = 0;
 
+        private bool isTyping = false;
 
         private string userName = "";
         public MainMenu _instance;
@@ -83,7 +84,6 @@ namespace DesktopType
         {
             logMenu.Close();
         }
-
 
         private void MainTextBox_KeyDown(object sender, KeyEventArgs e)
         {
@@ -176,8 +176,16 @@ namespace DesktopType
         // Обработка кнопки обновления текста
         private void reloadText_Click(object sender, EventArgs e)
         {
-            getText();
+            timer1.Enabled = false;
+
+            Timer15.Image = Image.FromFile($"Pictures/15 gray.png");
+            Timer30.Image = Image.FromFile($"Pictures/30 gray.png");
+            Timer60.Image = Image.FromFile($"Pictures/60 gray.png");
+
+            TimeLabel.Text = "Время";
             i = 0;
+            clickedTime = 0;
+            getText();
             paintText();
         }
 
@@ -345,7 +353,7 @@ namespace DesktopType
             return record;
         }
 
-        private void newRec(int clickedTime, int record)
+        private void newRec(int clickedTime, int record)    //Запись нового рекорда
         {
             var newFile = new List<string>();
             using (StreamReader sr = new StreamReader("Users.txt"))
@@ -404,7 +412,7 @@ namespace DesktopType
             RichTextBox1.DeselectAll();
         }
 
-
+        //Переход на меню информации
         private void descriptionButton_Click(object sender, EventArgs e)
         {
             DescMenu descMenu = new DescMenu(this.logMenu, this);
@@ -412,6 +420,7 @@ namespace DesktopType
             this.Hide();
         }
 
+        //Переход на меню аккаунта
         private void accountButton_Click(object sender, EventArgs e)
         {
             AccountMenu accMenu = new AccountMenu(this.logMenu, this, userName);
@@ -419,6 +428,7 @@ namespace DesktopType
             this.Hide();
         }
 
+        //анимации кнопок
         private void accountButton_MouseEnter(object sender, EventArgs e)
         {
             accountButton.Image = Image.FromFile($"Pictures/profile.png");

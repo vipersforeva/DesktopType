@@ -132,7 +132,7 @@
             // descriptionButton
             // 
             descriptionButton.Image = Properties.Resources.descriptionButton;
-            descriptionButton.Location = new Point(1806, 321);
+            descriptionButton.Location = new Point(1806, 172);
             descriptionButton.Name = "descriptionButton";
             descriptionButton.Size = new Size(55, 55);
             descriptionButton.SizeMode = PictureBoxSizeMode.AutoSize;
